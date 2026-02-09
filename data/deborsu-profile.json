@@ -1,0 +1,83 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://ouaisfieu.github.io/confidentiel/scandale/data/deborsu-profile.json",
+  "name": "Lead-dexing : Christophe Deborsu — Profil documenté",
+  "description": "Fiche de documentation systématique du journaliste Christophe Deborsu : parcours, mandats, réseaux, déclarations, controverses",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "dateModified": "2026-02-09",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Dossier Scandale — Sans boulot : tous fraudeurs ?",
+    "url": "https://ouaisfieu.github.io/confidentiel/scandale/"
+  },
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://ouaisfieu.github.io/confidentiel/scandale/deborsu.html#person",
+    "name": "Christophe Deborsu",
+    "birthDate": "1965-04-23",
+    "birthPlace": {
+      "@type": "Place",
+      "name": "Namur, Belgique"
+    },
+    "nationality": "Belge",
+    "jobTitle": "Journaliste",
+    "description": "Journaliste belge bilingue, auteur du reportage controversé 'Sans boulot : tous fraudeurs ?' (RTL-TVI, 7 novembre 2025). Chroniqueur 'La Wallonie profonde' dans De Standaard.",
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "RTL Belgium",
+        "startDate": "2015",
+        "description": "Journaliste et présentateur"
+      }
+    ],
+    "alumniOf": [
+      {
+        "@type": "Organization",
+        "name": "RTBF",
+        "startDate": "1988",
+        "endDate": "2012",
+        "description": "24 ans - Participation au 'Bye Bye Belgium' (2006), interview Leterme/Brabançonne"
+      }
+    ],
+    "knowsLanguage": ["fr", "nl"],
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q2964878"
+    ]
+  },
+  "hasPart": [
+    {
+      "@type": "Thing",
+      "name": "Liens familiaux politiques",
+      "description": "Nièce : Charlotte Deborsu, échevine et députée MR à Namur. Lien familial avec le parti libéral belge."
+    },
+    {
+      "@type": "Thing",
+      "name": "Chronique De Standaard",
+      "description": "Tient depuis 10 ans la chronique 'La Wallonie profonde' dans le quotidien flamand De Standaard."
+    },
+    {
+      "@type": "Thing",
+      "name": "Controverse #MRTL",
+      "description": "Hashtag circulant sur les réseaux sociaux accusant RTL Belgium de servir la propagande du MR de Georges-Louis Bouchez."
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Sans boulot : tous fraudeurs ?",
+      "datePublished": "2025-11-07",
+      "description": "Reportage diffusé dans 'Je vous dérange' sur RTL-TVI. 410 860 téléspectateurs, 39,1% de part de marché. Centaines de plaintes au CSA."
+    }
+  ],
+  "keywords": [
+    "Christophe Deborsu",
+    "RTL-TVI",
+    "Sans boulot tous fraudeurs",
+    "Je vous dérange",
+    "journaliste belge",
+    "Charlotte Deborsu",
+    "MR",
+    "#MRTL",
+    "De Standaard",
+    "Bye Bye Belgium"
+  ]
+}
