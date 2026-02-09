@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Christophe Deborsu — Réseaux et liens | Charlotte Deborsu MR, RTL Bertelsmann, De Standaard</title>
+    <meta name="description" content="Cartographie des réseaux de Christophe Deborsu : liens familiaux (Charlotte Deborsu, échevine MR Namur), employeurs (RTL/Bertelsmann, De Standaard/Mediahuis), soutiens et critiques politiques.">
+    <meta name="keywords" content="Charlotte Deborsu MR, Deborsu famille politique, RTL Bertelsmann Belgique, De Standaard Mediahuis, #MRTL, Georges-Louis Bouchez Deborsu">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://ouaisfieu.github.io/confidentiel/scandale/deborsu/reseaux.html">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Christophe Deborsu — Réseaux et liens",
+        "description": "Cartographie des liens familiaux, professionnels et politiques",
+        "isPartOf": {"@type": "WebSite", "url": "https://ouaisfieu.github.io/confidentiel/scandale/deborsu/"}
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Qui est Charlotte Deborsu ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Charlotte Deborsu est la nièce de Christophe Deborsu. Elle est échevine et députée du MR (Mouvement Réformateur) à Namur. Ce lien familial direct avec le parti libéral de Georges-Louis Bouchez alimente les accusations de partialité politique, notamment via le hashtag #MRTL."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "À qui appartient RTL Belgium ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "RTL Belgium appartient au groupe RTL Group, lui-même filiale du géant allemand des médias Bertelsmann. C'est la principale chaîne privée francophone en Belgique, en concurrence avec le service public RTBF. Sa ligne éditoriale est plus commerciale et sensationnaliste que celle du service public."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Qu'est-ce que la controverse #MRTL ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Le hashtag #MRTL (contraction de MR et RTL) a circulé sur les réseaux sociaux suite au reportage 'Sans boulot : tous fraudeurs ?'. Il suggère une collusion entre la chaîne RTL Belgium et le parti MR de Georges-Louis Bouchez. Les critiques pointent : les liens familiaux Deborsu-MR, la thèse du reportage alignée sur le discours libéral, et le soutien immédiat du président du MR au reportage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Pourquoi Christophe Deborsu écrit-il dans De Standaard ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Christophe Deborsu tient une chronique 'La Wallonie profonde' dans De Standaard, quotidien flamand de référence (groupe Mediahuis). Son bilinguisme lui permet d'être un 'passeur' entre les deux communautés. Cependant, des critiques estiment que sa chronique renforce certains stéréotypes sur la Wallonie auprès du lectorat flamand conservateur."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <style>
+        :root { --bg:#0a0a0a; --surface:#111; --border:#2a2a2a; --text:#e0e0e0; --muted:#888; --red:#dc2626; --blue:#3b82f6; --green:#10b981; --yellow:#eab308; }
+        * { box-sizing:border-box; margin:0; padding:0; }
+        body { font-family:system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+        .container { max-width:900px; margin:0 auto; padding:2rem 1.5rem; }
+        header { border-bottom:1px solid var(--border); padding-bottom:1rem; margin-bottom:2rem; }
+        nav { font-size:0.8125rem; margin-bottom:1rem; }
+        nav a { color:var(--muted); text-decoration:none; margin-right:1rem; }
+        nav a:hover { color:var(--text); }
+        .badge { display:inline-block; font-family:monospace; font-size:0.75rem; background:var(--red); color:#fff; padding:0.25rem 0.5rem; margin-bottom:1rem; }
+        h1 { font-size:1.75rem; margin-bottom:0.5rem; }
+        .lead { color:var(--muted); }
+        
+        h2 { font-size:1.25rem; margin:2rem 0 1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border); }
+        
+        .network-section { margin:1.5rem 0; }
+        .network-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; }
+        .network-card { background:var(--surface); border:1px solid var(--border); padding:1.25rem; position:relative; }
+        .network-card::before { content:''; position:absolute; top:0; left:0; width:4px; height:100%; }
+        .network-card.family::before { background:var(--red); }
+        .network-card.employer::before { background:var(--blue); }
+        .network-card.support::before { background:var(--green); }
+        .network-card.critic::before { background:var(--yellow); }
+        .network-card .type { font-family:monospace; font-size:0.625rem; color:var(--muted); letter-spacing:0.1em; margin-bottom:0.5rem; }
+        .network-card h3 { font-size:1rem; margin-bottom:0.25rem; }
+        .network-card .role { font-size:0.8125rem; color:var(--muted); margin-bottom:0.5rem; }
+        .network-card p { font-size:0.875rem; margin:0; }
+        .network-card .link-type { display:inline-block; margin-top:0.75rem; font-size:0.6875rem; padding:0.25rem 0.5rem; background:var(--bg); border:1px solid var(--border); }
+        
+        .alert { background:rgba(220,38,38,0.1); border:1px solid var(--red); padding:1rem; margin:1.5rem 0; }
+        .alert h4 { color:var(--red); margin-bottom:0.5rem; font-size:0.9375rem; }
+        .alert p { font-size:0.875rem; margin:0; }
+        
+        .schema { background:var(--surface); border:1px solid var(--border); padding:1.5rem; margin:1.5rem 0; text-align:center; }
+        .schema h3 { font-size:1rem; margin-bottom:1rem; }
+        .schema-visual { font-family:monospace; font-size:0.8125rem; color:var(--muted); white-space:pre; text-align:left; overflow-x:auto; }
+        
+        footer { margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border); text-align:center; font-size:0.8125rem; color:var(--muted); }
+        footer a { color:var(--red); text-decoration:none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="./">← Dossier Deborsu</a>
+                <a href="parcours.html">Parcours</a>
+                <a href="oeuvres.html">Œuvres</a>
+                <a href="controverse.html">Controverse</a>
+            </nav>
+            <span class="badge">02 — CARTOGRAPHIE</span>
+            <h1>Réseaux</h1>
+            <p class="lead">Liens familiaux, professionnels et politiques</p>
+        </header>
+        
+        <main>
+            <section>
+                <h2>🔴 Liens familiaux</h2>
+                <div class="network-grid">
+                    <div class="network-card family">
+                        <div class="type">FAMILLE — NIÈCE</div>
+                        <h3>Charlotte Deborsu</h3>
+                        <div class="role">Échevine et députée MR · Namur</div>
+                        <p>Nièce directe de Christophe Deborsu. Élue du Mouvement Réformateur, parti de Georges-Louis Bouchez. Lien familial direct entre le journaliste et le parti libéral.</p>
+                        <span class="link-type">Lien familial 1er degré → parti politique</span>
+                    </div>
+                </div>
+                
+                <div class="alert">
+                    <h4>⚠️ Pourquoi ce lien est-il significatif ?</h4>
+                    <p>Le reportage "Sans boulot : tous fraudeurs ?" reprend la thèse libérale sur l'assistanat. Le président du MR, Georges-Louis Bouchez, l'a immédiatement salué. La nièce du journaliste est élue de ce même parti. Ce faisceau d'indices alimente la controverse #MRTL.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>🔵 Employeurs</h2>
+                <div class="network-grid">
+                    <div class="network-card employer">
+                        <div class="type">EMPLOYEUR ACTUEL</div>
+                        <h3>RTL Belgium</h3>
+                        <div class="role">Groupe RTL / Bertelsmann (Allemagne)</div>
+                        <p>Principale chaîne privée francophone belge. Ligne éditoriale commerciale. Émission "Je vous dérange" depuis 2020.</p>
+                        <span class="link-type">Contrat salarié depuis 2015</span>
+                    </div>
+                    
+                    <div class="network-card employer">
+                        <div class="type">COLLABORATEUR</div>
+                        <h3>De Standaard</h3>
+                        <div class="role">Groupe Mediahuis (Belgique)</div>
+                        <p>Quotidien flamand de référence, centre-droit. Chronique "La Wallonie profonde" depuis ~2015. Regard sur la Wallonie pour le lectorat flamand.</p>
+                        <span class="link-type">Chroniqueur régulier</span>
+                    </div>
+                    
+                    <div class="network-card employer">
+                        <div class="type">ANCIEN EMPLOYEUR</div>
+                        <h3>RTBF</h3>
+                        <div class="role">Service public audiovisuel</div>
+                        <p>24 ans (1988-2012). Bye Bye Belgium (2006), piège Leterme (2007). Départ dans un contexte de tensions.</p>
+                        <span class="link-type">Ex-salarié</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>🟢 Soutiens politiques (reportage 2025)</h2>
+                <div class="network-grid">
+                    <div class="network-card support">
+                        <div class="type">SOUTIEN PUBLIC</div>
+                        <h3>Georges-Louis Bouchez</h3>
+                        <div class="role">Président du MR</div>
+                        <p>A salué le reportage comme "un vrai travail d'enquête" illustrant "l'héritage de l'assistanat de la gauche". Réaction immédiate sur Twitter/X.</p>
+                        <span class="link-type">Validation publique</span>
+                    </div>
+                    
+                    <div class="network-card support">
+                        <div class="type">SOUTIEN PARLEMENTAIRE</div>
+                        <h3>Denis Ducarme</h3>
+                        <div class="role">Député MR</div>
+                        <p>A demandé l'audition de Christophe Deborsu au Parlement pour présenter son enquête.</p>
+                        <span class="link-type">Relais institutionnel</span>
+                    </div>
+                    
+                    <div class="network-card support">
+                        <div class="type">SOUTIEN FLAMAND</div>
+                        <h3>Bart De Wever</h3>
+                        <div class="role">Président N-VA</div>
+                        <p>A utilisé le reportage pour défendre les réformes contre "le laxisme passé du PS". Convergence droite flamande / droite francophone.</p>
+                        <span class="link-type">Récupération politique</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>🟡 Critiques (reportage 2025)</h2>
+                <div class="network-grid">
+                    <div class="network-card critic">
+                        <div class="type">CRITIQUE PUBLIC</div>
+                        <h3>Paul Magnette</h3>
+                        <div class="role">Président du PS</div>
+                        <p>A dénoncé un reportage qui "se vautre dans la caricature, donnant une fausse image d'un système plein d'abus".</p>
+                        <span class="link-type">Opposition publique</span>
+                    </div>
+                    
+                    <div class="network-card critic">
+                        <div class="type">VICTIME DU MONTAGE</div>
+                        <h3>Gaëlle Denys</h3>
+                        <div class="role">Présidente CPAS Verviers</div>
+                        <p>Interviewée 1 heure, citée quelques secondes. A dénoncé "l'instrumentalisation de la misère sociale à des fins sensationnalistes".</p>
+                        <span class="link-type">Témoignage tronqué</span>
+                    </div>
+                    
+                    <div class="network-card critic">
+                        <div class="type">PARTIS D'OPPOSITION</div>
+                        <h3>Ecolo / PTB</h3>
+                        <div class="role">Partis de gauche</div>
+                        <p>Ont critiqué une "thèse préconçue" et demandé des comptes sur les méthodes journalistiques.</p>
+                        <span class="link-type">Opposition politique</span>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="schema">
+                <h3>🔗 Schéma synthétique</h3>
+                <div class="schema-visual">
+                     ┌─────────────────────────────────────────────────────┐
+                     │                    FAMILLE                         │
+                     │  Charlotte Deborsu ──────────────► MR (Namur)      │
+                     │         │                              │           │
+                     │         │ nièce                        │           │
+                     │         ▼                              ▼           │
+                     │  CHRISTOPHE DEBORSU ◄──── soutient ── G-L Bouchez  │
+                     │         │                                          │
+                     │         │ emploie                                  │
+                     │         ▼                                          │
+                     │    RTL Belgium ──────────► Bertelsmann (DE)        │
+                     │         │                                          │
+                     │         │ chroniqueur                              │
+                     │         ▼                                          │
+                     │    De Standaard ─────────► Mediahuis (BE)          │
+                     │         │                                          │
+                     │         │ lectorat                                 │
+                     │         ▼                                          │
+                     │    Centre-droit flamand ◄──── convergence ── N-VA  │
+                     └─────────────────────────────────────────────────────┘
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <a href="./">← Dossier Deborsu</a> · 
+            <a href="oeuvres.html">Œuvres →</a> · 
+            <a href="../">Dossier Scandale</a> · 
+            <a href="https://ouaisfi.eu/">ouaisfi.eu</a>
+        </footer>
+    </div>
+</body>
+</html>

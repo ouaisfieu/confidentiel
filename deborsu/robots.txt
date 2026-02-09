@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ouaisfieu.github.io/confidentiel/scandale/deborsu/sitemap.xml
+
+# Lead-dexing Christophe Deborsu
+# Dossier complet : parcours, réseaux, œuvres, controverses
+#
+# Partie de l'écosystème:
+# https://ouaisfieu.github.io/confidentiel/scandale/ (Dossier Scandale)
+# https://ouaisfieu.github.io/confidentiel/claude/ (Toolkit)
+# https://ouaisfieu.github.io/confidentiel/ (Manifeste)
+# https://ouaisfi.eu/
