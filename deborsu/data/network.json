@@ -1,0 +1,132 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://ouaisfieu.github.io/confidentiel/scandale/deborsu/data/network.json",
+  "name": "Christophe Deborsu — Cartographie des réseaux",
+  "description": "Liens familiaux, professionnels et politiques de Christophe Deborsu",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "dateModified": "2026-02-09",
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Réseaux Christophe Deborsu",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Liens familiaux",
+        "item": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "Person",
+              "name": "Charlotte Deborsu",
+              "description": "Nièce de Christophe Deborsu",
+              "jobTitle": "Échevine et députée MR",
+              "workLocation": {"@type": "Place", "name": "Namur"},
+              "memberOf": {"@type": "PoliticalParty", "name": "Mouvement Réformateur (MR)"}
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Employeurs",
+        "item": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "Organization",
+              "name": "RTBF",
+              "description": "Service public audiovisuel belge francophone",
+              "url": "https://www.rtbf.be",
+              "additionalProperty": {"@type": "PropertyValue", "name": "Période", "value": "1988-2012"}
+            },
+            {
+              "@type": "Organization",
+              "name": "RTL Belgium",
+              "description": "Chaîne privée belge francophone (groupe Bertelsmann/RTL Group)",
+              "url": "https://www.rtl.be",
+              "additionalProperty": {"@type": "PropertyValue", "name": "Période", "value": "2015-présent"}
+            },
+            {
+              "@type": "Organization",
+              "name": "De Standaard",
+              "description": "Quotidien flamand de centre-droit (groupe Mediahuis)",
+              "url": "https://www.standaard.be",
+              "additionalProperty": {"@type": "PropertyValue", "name": "Rôle", "value": "Chroniqueur 'La Wallonie profonde'"}
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Soutiens politiques identifiés (reportage)",
+        "item": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "Person",
+              "name": "Georges-Louis Bouchez",
+              "jobTitle": "Président du MR",
+              "description": "A salué le reportage comme 'un vrai travail d'enquête' illustrant 'l'héritage de l'assistanat de la gauche'"
+            },
+            {
+              "@type": "Person",
+              "name": "Denis Ducarme",
+              "jobTitle": "Député MR",
+              "description": "A demandé l'audition de Deborsu au Parlement"
+            },
+            {
+              "@type": "Person",
+              "name": "Bart De Wever",
+              "jobTitle": "Président N-VA",
+              "description": "A utilisé le reportage pour défendre les réformes contre 'le laxisme du PS'"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Critiques identifiés (reportage)",
+        "item": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "Person",
+              "name": "Paul Magnette",
+              "jobTitle": "Président du PS",
+              "description": "A dénoncé un reportage qui 'se vautre dans la caricature, donnant une fausse image d'un système plein d'abus'"
+            },
+            {
+              "@type": "Person",
+              "name": "Gaëlle Denys",
+              "jobTitle": "Présidente CPAS Verviers",
+              "description": "Interviewée 1h, citée quelques secondes. A dénoncé 'l'instrumentalisation de la misère sociale'"
+            },
+            {
+              "@type": "Organization",
+              "name": "Ecolo",
+              "description": "A critiqué une 'thèse préconçue'"
+            },
+            {
+              "@type": "Organization",
+              "name": "PTB",
+              "description": "A critiqué une 'thèse préconçue'"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "keywords": [
+    "Christophe Deborsu réseaux",
+    "Charlotte Deborsu MR",
+    "RTL Belgium Bertelsmann",
+    "De Standaard Mediahuis",
+    "Georges-Louis Bouchez",
+    "liens politiques journalistes"
+  ]
+}

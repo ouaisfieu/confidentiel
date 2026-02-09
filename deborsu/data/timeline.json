@@ -1,0 +1,196 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://ouaisfieu.github.io/confidentiel/scandale/deborsu/data/timeline.json",
+  "name": "Christophe Deborsu — Timeline complète",
+  "description": "Chronologie détaillée de la carrière de Christophe Deborsu : RTBF, RTL, publications, controverses",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "dateModified": "2026-02-09",
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Événements clés — Christophe Deborsu",
+    "numberOfItems": 18,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Event",
+          "name": "Naissance",
+          "startDate": "1965-04-23",
+          "location": {"@type": "Place", "name": "Namur, Belgique"}
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Event",
+          "name": "Entrée à la RTBF",
+          "startDate": "1988",
+          "description": "Début de carrière au service public audiovisuel belge francophone"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Event",
+          "name": "Interview Leterme / Brabançonne",
+          "startDate": "2007-07-21",
+          "description": "Piège médiatique : le Premier ministre Yves Leterme chante La Marseillaise au lieu de La Brabançonne lors de la fête nationale"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Event",
+          "name": "Bye Bye Belgium",
+          "startDate": "2006-12-13",
+          "description": "Participation au faux flash info annonçant l'indépendance de la Flandre sur la RTBF. Polémique nationale."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Event",
+          "name": "Publication 'Être flamand'",
+          "startDate": "2008",
+          "description": "Livre sur l'identité flamande et les relations communautaires belges"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Event",
+          "name": "Départ de la RTBF",
+          "startDate": "2012",
+          "description": "Fin de 24 ans au service public après tensions internes"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "Event",
+          "name": "Début chronique De Standaard",
+          "startDate": "2015",
+          "description": "Lancement de la chronique 'La Wallonie profonde' dans le quotidien flamand"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "Event",
+          "name": "Arrivée chez RTL Belgium",
+          "startDate": "2015",
+          "description": "Rejoint RTL-TVI comme journaliste et présentateur"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "Event",
+          "name": "Publication 'La Belgique pour les Nuls'",
+          "startDate": "2016",
+          "description": "Ouvrage de vulgarisation sur le système politique belge"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "Event",
+          "name": "Lancement 'Je vous dérange'",
+          "startDate": "2020",
+          "description": "Émission de reportages sur RTL-TVI, format provocateur assumé"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "Event",
+          "name": "Reportage 'Sans boulot : tous fraudeurs ?'",
+          "startDate": "2025-11-07",
+          "description": "Diffusion du reportage controversé. 410 860 téléspectateurs, 39,1% de PDM."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "Event",
+          "name": "Premières plaintes CSA",
+          "startDate": "2025-11-08",
+          "description": "Dépôt de plaintes pour 'incitation à la discrimination'. Centaines de plaintes les jours suivants."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "Event",
+          "name": "Réaction Georges-Louis Bouchez",
+          "startDate": "2025-11-08",
+          "description": "Le président du MR salue 'un vrai travail d'enquête' sur Twitter/X"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "Event",
+          "name": "Réaction Paul Magnette",
+          "startDate": "2025-11-09",
+          "description": "Le président du PS dénonce un reportage qui 'se vautre dans la caricature'"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "Event",
+          "name": "Motion conseil Verviers",
+          "startDate": "2025-11-24",
+          "description": "Vote d'une motion de soutien à Gaëlle Denys (CPAS), interviewée 1h mais citée quelques secondes"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "Event",
+          "name": "Demande audition parlementaire",
+          "startDate": "2025-11",
+          "description": "Denis Ducarme (MR) demande l'audition de Deborsu à la Chambre"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "Event",
+          "name": "Auditions parlementaires",
+          "startDate": "2025-12",
+          "description": "5 ministres entendus à la Chambre sur les questions de fraude sociale"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "Event",
+          "name": "Instruction CSA en cours",
+          "startDate": "2026",
+          "description": "Examen des plaintes pour soupçons d'incitation à la haine. Décision attendue."
+        }
+      }
+    ]
+  }
+}
