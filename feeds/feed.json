@@ -5,7 +5,7 @@
   "feed_url": "https://ouaisfieu.github.io/alertes-sociales/feeds/feed.json",
   "description": "Surveillance citoyenne des droits sociaux en Belgique",
   "language": "fr-BE",
-  "authors": [{"name": "Yan Doumont", "url": "https://ouaisfi.eu/"}],
+  "authors": [{"name": "Yan Rodrom", "url": "https://ouaisfi.eu/"}],
   "hubs": [{"type": "data", "url": "https://yannkeep.github.io/alertes-sociales/"}],
   "items": [
     {
@@ -14,7 +14,7 @@
       "title": "Le démantèlement orchestré",
       "summary": "Quand l'État fabrique des exclus et leur retire les outils de résistance. 184 463 exclusions chômage, 270 associations EP gelées.",
       "date_published": "2026-02-09T08:00:00+01:00",
-      "authors": [{"name": "Yan Doumont"}],
+      "authors": [{"name": "Yan Rodrom"}],
       "tags": ["coalition-arizona", "education-permanente", "article-23"]
     },
     {
@@ -23,7 +23,7 @@
       "title": "La dépossession du pouvoir d'agir (1980-2026)",
       "summary": "VOKA, capture corporatiste, fracture numérique, concentration médiatique. 40 ans de recul démocratique documentés.",
       "date_published": "2026-02-09T07:00:00+01:00",
-      "authors": [{"name": "Yan Doumont"}],
+      "authors": [{"name": "Yan Rodrom"}],
       "tags": ["voka", "neoliberalisme", "medias"]
     },
     {
@@ -32,7 +32,7 @@
       "title": "Cartographie des médias et stratégie de publication",
       "summary": "Guide pratique de publication : 8+ canaux exploitables pour lanceurs d'alerte en Belgique.",
       "date_published": "2026-02-09T06:00:00+01:00",
-      "authors": [{"name": "Yan Doumont"}],
+      "authors": [{"name": "Yan Rodrom"}],
       "tags": ["medias", "publication"]
     }
   ]
