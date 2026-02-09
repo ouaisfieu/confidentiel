@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Confidentiel | Tableau de Bord Analytique</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Config & Custom Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            700: '#44403c',
+                            800: '#292524',
+                            900: '#1c1917',
+                        },
+                        accent: {
+                            DEFAULT: '#b45309', // Amber 700
+                            light: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #fafaf9; /* Stone 50 */
+            color: #292524; /* Stone 800 */
+        }
+        
+        /* Chart Container Utilities */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Specific heights for responsiveness */
+        .chart-height-sm { height: 250px; max-height: 250px; }
+        .chart-height-md { height: 320px; max-height: 320px; }
+        .chart-height-lg { height: 400px; max-height: 400px; }
+
+        @media (min-width: 768px) {
+            .chart-container.main-chart { height: 350px; }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e7e5e4; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a8a29e; 
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #78716c; 
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+    <!-- 
+    Placeholder Comments Required:
+    
+    <!-- Chosen Palette: Warm Neutrals (Stone/Sand base with deep Amber accents). Represents stability, secrecy, and organic data flows. -->
+    
+    <!-- Application Structure Plan: 
+         Designed as a "Mission Dashboard" for a confidential project.
+         1. Header: Status indicators and global context.
+         2. KPI Cards: Immediate quantitative insights (Success rate, Anomalies).
+         3. Interactive Analysis Section: 
+            - Split view: Time-series analysis (Line Chart) vs. Resource Distribution (Doughnut).
+            - Interaction: Clicking chart points updates a "Context Panel" with qualitative details.
+         4. Geographic/Network Data: Detailed list view with filtering capabilities (Origin/Status) to explore specific data points.
+         5. Recommendation Engine: Textual synthesis based on current data state.
+         Rationale: This structure moves from macro (KPIs) to micro (Logs) allows users to first grasp the health of the project and then investigate specifics.
+    -->
+
+    <!-- Visualization & Content Choices:
+         1. Metric Cards: Goal -> Inform. Method -> HTML/CSS Grid. Justification -> Instant readability of key stats found in typical status reports.
+         2. "Flux d'Activité" (Activity Flow): Goal -> Change/Trend. Method -> Chart.js Line Chart. Interaction -> Hover/Click to reveal specific event details in text panel. Justification -> Shows stability over time.
+         3. "Répartition des Incidents" (Incident Spread): Goal -> Compare. Method -> Chart.js Doughnut. Justification -> Quick ratio visual.
+         4. "Journal des Accès" (Access Log): Goal -> Organize. Method -> HTML Table with JS Filter. Interaction -> Search/Filter by status. Justification -> Allows granular exploration of the "Source Data".
+         NO SVG graphics used. NO Mermaid JS used. 
+    -->
+
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    -->
+
+</head>
+<body class="antialiased min-h-screen flex flex-col font-sans">
+
+    <!-- Navigation / Header -->
+    <header class="bg-white border-b border-stone-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Branding -->
+                <div class="flex items-center space-x-3">
+                    <div class="h-8 w-8 bg-stone-800 flex items-center justify-center rounded-full text-white font-bold">C</div>
+                    <span class="text-xl font-bold tracking-tight text-stone-800">CONFIDENTIEL</span>
+                    <span class="px-2 py-0.5 rounded text-xs font-medium bg-stone-100 text-stone-500 border border-stone-200">v.2.4.0</span>
+                </div>
+
+                <!-- Nav Links (Functional) -->
+                <nav class="hidden md:flex space-x-8">
+                    <button onclick="navTo('overview')" class="text-stone-900 hover:text-accent font-medium transition-colors border-b-2 border-transparent hover:border-accent pb-1">Vue d'Ensemble</button>
+                    <button onclick="navTo('analysis')" class="text-stone-500 hover:text-accent font-medium transition-colors border-b-2 border-transparent hover:border-accent pb-1">Analyse Spectrale</button>
+                    <button onclick="navTo('logs')" class="text-stone-500 hover:text-accent font-medium transition-colors border-b-2 border-transparent hover:border-accent pb-1">Archives</button>
+                </nav>
+
+                <!-- Status Indicator -->
+                <div class="flex items-center space-x-4">
+                    <div class="flex flex-col items-end">
+                        <span class="text-xs text-stone-400 uppercase tracking-wider">Statut Réseau</span>
+                        <span class="text-sm font-bold text-emerald-600 flex items-center">
+                            <span class="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></span>
+                            STABLE
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-stone-500 hover:text-stone-900 focus:outline-none">
+                        <span class="text-2xl">≡</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-50 border-b border-stone-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <button onclick="navTo('overview')" class="block px-3 py-2 rounded-md text-base font-medium text-stone-900 hover:bg-stone-200 w-full text-left">Vue d'Ensemble</button>
+                <button onclick="navTo('analysis')" class="block px-3 py-2 rounded-md text-base font-medium text-stone-500 hover:bg-stone-200 w-full text-left">Analyse</button>
+                <button onclick="navTo('logs')" class="block px-3 py-2 rounded-md text-base font-medium text-stone-500 hover:bg-stone-200 w-full text-left">Archives</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+            <!-- INTRO SECTION -->
+            <section id="intro" class="mb-10 fade-in">
+                <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 md:p-8">
+                    <h1 class="text-2xl md:text-3xl font-bold text-stone-900 mb-4">Rapport de Synthèse : Opération YannKeep/OuaisFieu</h1>
+                    <p class="text-stone-600 leading-relaxed max-w-3xl">
+                        Ce tableau de bord interactif centralise les données extraites des protocoles sécurisés. 
+                        Il permet une exploration approfondie des métriques de performance, des anomalies détectées et de la distribution des ressources. 
+                        Utilisez les graphiques ci-dessous pour filtrer les événements et corréler les incidents isolés avec les tendances globales.
+                    </p>
+                </div>
+            </section>
+
+            <!-- KPIs -->
+            <section id="overview" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 fade-in">
+                <!-- KPI 1 -->
+                <div class="bg-white rounded-lg p-6 shadow-sm border border-stone-100 hover:border-stone-300 transition-all cursor-default">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-xs font-semibold tracking-wider text-stone-400 uppercase">Intégrité des Données</p>
+                            <h3 class="text-3xl font-bold text-stone-800 mt-2">98.4%</h3>
+                        </div>
+                        <div class="p-2 bg-stone-100 rounded-lg text-stone-600 font-mono text-xl">∑</div>
+                    </div>
+                    <p class="text-xs text-emerald-600 mt-4 flex items-center font-medium">
+                        <span>▲ +1.2%</span>
+                        <span class="text-stone-400 ml-2">vs. semaine dernière</span>
+                    </p>
+                </div>
+
+                <!-- KPI 2 -->
+                <div class="bg-white rounded-lg p-6 shadow-sm border border-stone-100 hover:border-stone-300 transition-all cursor-default">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-xs font-semibold tracking-wider text-stone-400 uppercase">Menaces Interceptées</p>
+                            <h3 class="text-3xl font-bold text-stone-800 mt-2">42</h3>
+                        </div>
+                        <div class="p-2 bg-stone-100 rounded-lg text-stone-600 font-mono text-xl">⚠</div>
+                    </div>
+                    <p class="text-xs text-amber-600 mt-4 flex items-center font-medium">
+                        <span>● Niveau Modéré</span>
+                        <span class="text-stone-400 ml-2">Secteur 7G</span>
+                    </p>
+                </div>
+
+                <!-- KPI 3 -->
+                <div class="bg-white rounded-lg p-6 shadow-sm border border-stone-100 hover:border-stone-300 transition-all cursor-default">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-xs font-semibold tracking-wider text-stone-400 uppercase">Charge Serveur</p>
+                            <h3 class="text-3xl font-bold text-stone-800 mt-2">340 ms</h3>
+                        </div>
+                        <div class="p-2 bg-stone-100 rounded-lg text-stone-600 font-mono text-xl">⚡</div>
+                    </div>
+                    <p class="text-xs text-stone-500 mt-4 flex items-center">
+                        <span class="text-emerald-600">▼ Optimisé</span>
+                        <span class="text-stone-400 ml-2">Latence minime</span>
+                    </p>
+                </div>
+
+                <!-- KPI 4 -->
+                <div class="bg-white rounded-lg p-6 shadow-sm border border-stone-100 hover:border-stone-300 transition-all cursor-default">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-xs font-semibold tracking-wider text-stone-400 uppercase">Archives Chiffrées</p>
+                            <h3 class="text-3xl font-bold text-stone-800 mt-2">1.2 TB</h3>
+                        </div>
+                        <div class="p-2 bg-stone-100 rounded-lg text-stone-600 font-mono text-xl">⏚</div>
+                    </div>
+                    <p class="text-xs text-stone-500 mt-4 flex items-center">
+                        <span>Dernière mise à jour: 12:42</span>
+                    </p>
+                </div>
+            </section>
+
+            <!-- MAIN ANALYSIS SECTION -->
+            <section id="analysis" class="mb-10 fade-in">
+                <div class="flex flex-col lg:flex-row gap-6">
+                    
+                    <!-- Left: Interactive Activity Chart -->
+                    <div class="w-full lg:w-2/3 bg-white rounded-xl shadow-sm border border-stone-200 p-6">
+                        <div class="flex justify-between items-center mb-6">
+                            <div>
+                                <h2 class="text-lg font-bold text-stone-800">Flux d'Activité Réseau</h2>
+                                <p class="text-sm text-stone-500">Volume de requêtes sur les 7 derniers jours</p>
+                            </div>
+                            <!-- Simple Time Filter -->
+                            <div class="flex bg-stone-100 rounded-lg p-1">
+                                <button onclick="updateTimeRange('7d')" id="btn-7d" class="px-3 py-1 text-xs font-medium rounded bg-white shadow text-stone-800 transition-all">7J</button>
+                                <button onclick="updateTimeRange('24h')" id="btn-24h" class="px-3 py-1 text-xs font-medium rounded text-stone-500 hover:text-stone-800 transition-all">24H</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Chart Wrapper -->
+                        <div class="chart-container chart-height-md">
+                            <canvas id="activityChart"></canvas>
+                        </div>
+                        
+                        <div class="mt-4 p-4 bg-stone-50 rounded border border-stone-100">
+                            <h4 class="text-xs font-bold text-stone-500 uppercase tracking-wide mb-2">Analyse Automatisée</h4>
+                            <p id="chart-insight" class="text-sm text-stone-700">
+                                Le pic d'activité observé le <span class="font-semibold">Mardi</span> correspond à un transfert massif de données depuis le nœud "OuaisFieu". La stabilité est revenue à la normale par la suite.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Distribution & Context -->
+                    <div class="w-full lg:w-1/3 flex flex-col gap-6">
+                        
+                        <!-- Donut Chart -->
+                        <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 flex-grow">
+                            <h2 class="text-lg font-bold text-stone-800 mb-2">Typologie des Requêtes</h2>
+                            <p class="text-sm text-stone-500 mb-6">Répartition par protocole</p>
+                            
+                            <div class="chart-container" style="height: 220px; max-height: 220px;">
+                                <canvas id="distributionChart"></canvas>
+                            </div>
+
+                            <div class="mt-6 space-y-3">
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="flex items-center"><span class="w-3 h-3 rounded-full bg-stone-800 mr-2"></span>Sécurisé (HTTPS)</span>
+                                    <span class="font-bold text-stone-700">65%</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="flex items-center"><span class="w-3 h-3 rounded-full bg-stone-400 mr-2"></span>Interne (P2P)</span>
+                                    <span class="font-bold text-stone-700">25%</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="flex items-center"><span class="w-3 h-3 rounded-full bg-accent mr-2"></span>Non Identifié</span>
+                                    <span class="font-bold text-stone-700">10%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ARCHIVES / LOGS SECTION -->
+            <section id="logs" class="bg-white rounded-xl shadow-sm border border-stone-200 overflow-hidden fade-in">
+                <div class="p-6 border-b border-stone-100 flex flex-col md:flex-row justify-between md:items-center gap-4">
+                    <div>
+                        <h2 class="text-lg font-bold text-stone-800">Journal des Événements (Logs)</h2>
+                        <p class="text-sm text-stone-500">Historique des accès et anomalies système</p>
+                    </div>
+                    
+                    <!-- Filter Controls -->
+                    <div class="flex gap-2">
+                        <select id="statusFilter" onchange="filterLogs()" class="text-sm bg-stone-50 border border-stone-200 text-stone-700 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent">
+                            <option value="all">Tous les statuts</option>
+                            <option value="Succès">Succès</option>
+                            <option value="Avertissement">Avertissement</option>
+                            <option value="Critique">Critique</option>
+                        </select>
+                        <input type="text" id="searchLogs" onkeyup="filterLogs()" placeholder="Rechercher ID..." class="text-sm bg-stone-50 border border-stone-200 text-stone-700 rounded-md px-3 py-2 w-full md:w-48 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent">
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-stone-200">
+                        <thead class="bg-stone-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">Horodatage</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">ID Session</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">Origine</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">Cible</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">Statut</th>
+                                <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-stone-500 uppercase tracking-wider">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="logTableBody" class="bg-white divide-y divide-stone-200">
+                            <!-- JS will populate this -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Pagination Mockup -->
+                <div class="bg-stone-50 px-4 py-3 border-t border-stone-200 flex items-center justify-between sm:px-6">
+                    <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+                        <div>
+                            <p class="text-sm text-stone-700">
+                                Affichage de <span class="font-medium" id="showing-start">1</span> à <span class="font-medium" id="showing-end">5</span> sur <span class="font-medium">12</span> résultats
+                            </p>
+                        </div>
+                        <div>
+                            <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                                <button class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-stone-300 bg-white text-sm font-medium text-stone-500 hover:bg-stone-50">
+                                    <span class="sr-only">Précédent</span>
+                                    <span>&larr;</span>
+                                </button>
+                                <button class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-stone-300 bg-white text-sm font-medium text-stone-500 hover:bg-stone-50">
+                                    <span class="sr-only">Suivant</span>
+                                    <span>&rarr;</span>
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-800 text-stone-400 py-8 mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+            <div>
+                <h3 class="text-white font-bold mb-2">PROJET CONFIDENTIEL</h3>
+                <p>Accès restreint. Toute reproduction non autorisée de ce tableau de bord est strictement interdite.</p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-2">Liens Rapides</h3>
+                <ul class="space-y-1">
+                    <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Support Technique</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Signaler un Bug</a></li>
+                </ul>
+            </div>
+            <div class="text-right flex flex-col justify-between">
+                <p>&copy; 2024 YannKeep / OuaisFieu IO.</p>
+                <p class="text-xs text-stone-600">Generated for Source Analysis</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // --- DATA STORE ---
+        // Mock data representing the "Source Report" content
+        
+        const analyticsData = {
+            '7d': {
+                labels: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
+                data: [120, 350, 180, 200, 250, 140, 310],
+                insight: 'Le pic d\'activité observé le <span class="font-semibold">Mardi</span> correspond à un transfert massif de données depuis le nœud "OuaisFieu". La stabilité est revenue à la normale par la suite.'
+            },
+            '24h': {
+                labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00', '23:59'],
+                data: [45, 30, 85, 120, 95, 150, 70],
+                insight: 'Activité stable au cours des dernières 24 heures. Légère augmentation des connexions entrantes en soirée, typique des cycles de maintenance automatique.'
+            }
+        };
+
+        const logsData = [
+            { id: 'SESS-8492', time: '2023-10-24 14:32', origin: 'Bruxelles (BE)', target: '/api/v1/auth', status: 'Succès', action: 'Connexion' },
+            { id: 'SESS-8493', time: '2023-10-24 14:35', origin: 'Namur (BE)', target: '/secure/config', status: 'Avertissement', action: 'Accès Refusé' },
+            { id: 'SESS-8494', time: '2023-10-24 15:10', origin: 'Liège (BE)', target: '/public/assets', status: 'Succès', action: 'Téléchargement' },
+            { id: 'SESS-8495', time: '2023-10-24 16:45', origin: 'Inconnu (VPN)', target: '/admin/root', status: 'Critique', action: 'Blocage IP' },
+            { id: 'SESS-8496', time: '2023-10-24 17:00', origin: 'Mons (BE)', target: '/api/v1/sync', status: 'Succès', action: 'Sync Data' },
+            { id: 'SESS-8497', time: '2023-10-24 17:15', origin: 'Paris (FR)', target: '/api/v1/ping', status: 'Succès', action: 'Ping' },
+            { id: 'SESS-8498', time: '2023-10-24 18:22', origin: 'Bruxelles (BE)', target: '/db/query', status: 'Avertissement', action: 'Timeout' },
+            { id: 'SESS-8499', time: '2023-10-24 19:40', origin: 'Charleroi (BE)', target: '/auth/reset', status: 'Succès', action: 'Reset Pwd' }
+        ];
+
+        // --- CHART INSTANCES ---
+        let activityChartInstance = null;
+        let distributionChartInstance = null;
+
+        // --- INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            initActivityChart();
+            initDistributionChart();
+            renderLogs(logsData);
+        });
+
+        // --- CHART FUNCTIONS ---
+        
+        function initActivityChart() {
+            const ctx = document.getElementById('activityChart').getContext('2d');
+            
+            // Gradient Setup
+            const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+            gradient.addColorStop(0, 'rgba(41, 37, 36, 0.1)'); // Stone 800 low opacity
+            gradient.addColorStop(1, 'rgba(41, 37, 36, 0)');
+
+            activityChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: analyticsData['7d'].labels,
+                    datasets: [{
+                        label: 'Requêtes / Heure',
+                        data: analyticsData['7d'].data,
+                        borderColor: '#b45309', // Amber 700 (Accent)
+                        backgroundColor: gradient,
+                        borderWidth: 2,
+                        pointBackgroundColor: '#fff',
+                        pointBorderColor: '#b45309',
+                        pointHoverBackgroundColor: '#b45309',
+                        pointHoverBorderColor: '#fff',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: '#292524',
+                            titleColor: '#fafaf9',
+                            bodyColor: '#d6d3d1',
+                            padding: 12,
+                            cornerRadius: 4,
+                            displayColors: false,
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#f5f5f4' // Stone 100
+                            },
+                            ticks: {
+                                color: '#a8a29e' // Stone 400
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#a8a29e'
+                            }
+                        }
+                    },
+                    interaction: {
+                        mode: 'index',
+                        intersect: false,
+                    }
+                }
+            });
+        }
+
+        function initDistributionChart() {
+            const ctx = document.getElementById('distributionChart').getContext('2d');
+            
+            distributionChartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Sécurisé (HTTPS)', 'Interne (P2P)', 'Non Identifié'],
+                    datasets: [{
+                        data: [65, 25, 10],
+                        backgroundColor: [
+                            '#292524', // Stone 800
+                            '#a8a29e', // Stone 400
+                            '#b45309'  // Amber 700 (Accent)
+                        ],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '75%',
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.raw + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // --- INTERACTIVITY LOGIC ---
+
+        function updateTimeRange(range) {
+            // Update Buttons UI
+            const btn7d = document.getElementById('btn-7d');
+            const btn24h = document.getElementById('btn-24h');
+            
+            if (range === '7d') {
+                btn7d.className = "px-3 py-1 text-xs font-medium rounded bg-white shadow text-stone-800 transition-all";
+                btn24h.className = "px-3 py-1 text-xs font-medium rounded text-stone-500 hover:text-stone-800 transition-all";
+            } else {
+                btn24h.className = "px-3 py-1 text-xs font-medium rounded bg-white shadow text-stone-800 transition-all";
+                btn7d.className = "px-3 py-1 text-xs font-medium rounded text-stone-500 hover:text-stone-800 transition-all";
+            }
+
+            // Update Chart Data
+            activityChartInstance.data.labels = analyticsData[range].labels;
+            activityChartInstance.data.datasets[0].data = analyticsData[range].data;
+            activityChartInstance.update();
+
+            // Update Text Insight
+            const insightBox = document.getElementById('chart-insight');
+            insightBox.innerHTML = analyticsData[range].insight;
+            
+            // Simple flash animation for text
+            insightBox.classList.remove('fade-in');
+            void insightBox.offsetWidth; // trigger reflow
+            insightBox.classList.add('fade-in');
+        }
+
+        function filterLogs() {
+            const statusFilter = document.getElementById('statusFilter').value;
+            const searchFilter = document.getElementById('searchLogs').value.toLowerCase();
+
+            const filteredData = logsData.filter(log => {
+                const matchesStatus = statusFilter === 'all' || log.status === statusFilter;
+                const matchesSearch = log.id.toLowerCase().includes(searchFilter) || 
+                                      log.origin.toLowerCase().includes(searchFilter) ||
+                                      log.action.toLowerCase().includes(searchFilter);
+                return matchesStatus && matchesSearch;
+            });
+
+            renderLogs(filteredData);
+            updatePaginationInfo(filteredData.length);
+        }
+
+        function renderLogs(data) {
+            const tbody = document.getElementById('logTableBody');
+            tbody.innerHTML = '';
+
+            if (data.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="6" class="px-6 py-4 text-center text-sm text-stone-500 italic">Aucun résultat trouvé</td></tr>`;
+                return;
+            }
+
+            // Limit to 5 for "demo" pagination feel
+            const displayData = data.slice(0, 5);
+
+            displayData.forEach(log => {
+                let statusBadge = '';
+                if (log.status === 'Succès') {
+                    statusBadge = `<span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-emerald-100 text-emerald-800">Succès</span>`;
+                } else if (log.status === 'Avertissement') {
+                    statusBadge = `<span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-amber-100 text-amber-800">Avertissement</span>`;
+                } else if (log.status === 'Critique') {
+                    statusBadge = `<span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Critique</span>`;
+                }
+
+                const row = `
+                    <tr class="hover:bg-stone-50 transition-colors">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-stone-500 font-mono">${log.time}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-stone-900">${log.id}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-stone-500">${log.origin}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-stone-400 font-mono text-xs">${log.target}</td>
+                        <td class="px-6 py-4 whitespace-nowrap">${statusBadge}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                            <a href="#" class="text-accent hover:text-accent-light" onclick="alert('Détails de ${log.id} : \\nAction: ${log.action}\\nOrigine: ${log.origin}')">Voir</a>
+                        </td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+        }
+        
+        function updatePaginationInfo(count) {
+             const startSpan = document.getElementById('showing-start');
+             const endSpan = document.getElementById('showing-end');
+             
+             if (count === 0) {
+                 startSpan.innerText = '0';
+                 endSpan.innerText = '0';
+             } else {
+                 startSpan.innerText = '1';
+                 endSpan.innerText = Math.min(5, count);
+             }
+        }
+
+        function navTo(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                window.scrollTo({
+                    top: section.offsetTop - 80, // Offset for fixed header
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+    </script>
+</body>
+</html>
