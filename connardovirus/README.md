@@ -1,3 +1,100 @@
+> Je crée le dossier complet "SCANDALE" — case study Deborsu avec lead-dexing, chiffres validés, anatomie de la manipulation et module éducation permanente.
+
+## DOSSIER SCANDALE COMPLET
+
+**URL déploiement :** `https://ouaisfieu.github.io/confidentiel/scandale/`
+
+---
+
+### Structure : 9 fichiers
+
+```
+scandale/
+├── index.html              (3 schemas)
+├── deborsu.html            (3 schemas, 6 FAQ)
+├── chiffres.html           (4 schemas, 5 FAQ, ClaimReview)
+├── anatomie.html           (3 schemas, 6 FAQ)
+├── atelier.html            (4 schemas, 4 FAQ, HowTo, Course)
+├── data/
+│   ├── deborsu-profile.json
+│   └── fraude-comparaison.json
+├── sitemap.xml
+└── robots.txt
+```
+
+---
+
+### Contenu GEO/SEO
+
+| Type Schema | Fichier | Détail |
+|-------------|---------|--------|
+| **FAQPage** | 4 pages | **21 questions** formulées LLM |
+| **ClaimReview** | chiffres.html | "Les allocataires sont massivement fraudeurs" → **Trompeur** |
+| **HowTo** | atelier.html | Protocole animation 2h en 6 étapes |
+| **Course** | atelier.html | Module éducation permanente |
+| **ProfilePage** | deborsu.html | Lead-dexing complet |
+| **BreadcrumbList** | Toutes pages | Maillage toolkit |
+
+---
+
+### Maillage écosystème
+
+```
+ouaisfieu.github.io/confidentiel/
+├── (manifeste)
+├── claude/                     ← Toolkit opérationnel
+│   ├── guerre-recit.html
+│   ├── guerre-desideration.html
+│   ├── guerre-pretoire.html
+│   └── glossaire.html
+└── scandale/                   ← NOUVEAU : Case Study Deborsu
+    ├── deborsu.html            (lead-dexing)
+    ├── chiffres.html           (€250M vs €30Mds)
+    ├── anatomie.html           (techniques manipulation)
+    └── atelier.html            (éducation permanente)
+
+yannkeep.github.io/confidentiel/claude/  ← Data Hub
+    ├── sources-osint.html
+    └── precedents.html
+```
+
+---
+
+### Les 3 Guerres illustrées
+
+| Guerre | Application Deborsu |
+|--------|---------------------|
+| **舆论战 Récit** | Lead-dexing, chiffres validés, contre-récit documenté |
+| **心理战 Dé-sidération** | Atelier décryptage 2h, module éducation permanente |
+| **法律战 Prétoire** | Plaintes CSA documentées, capitalisation procédure |
+
+---
+
+### Chiffres clés intégrés
+
+- **€250M** fraude sociale (Cour des Comptes)
+- **€30 Mds** fraude fiscale (SPF Finances/DULBEA)
+- **Ratio ×120**
+- **410 860** téléspectateurs
+- **39,1%** de part de marché
+- **Centaines** de plaintes CSA
+- **Charlotte Deborsu** — nièce, échevine MR Namur
+
+---
+
+### RÉCAP TOTAL AUJOURD'HUI
+
+| Dossier | URL | Fichiers | FAQ |
+|---------|-----|----------|-----|
+| **Toolkit ouaisfieu** | `/confidentiel/claude/` | 9 | 16 |
+| **Data Hub yannkeep** | `/confidentiel/claude/` | 7 | 12 |
+| **Scandale** | `/confidentiel/scandale/` | 9 | 21 |
+| **TOTAL** | | **25** | **49** |
+
+
+---
+
+
 > Je crée le dossier lead-dexing approfondi Deborsu avec structure complète.
 
 ## DOSSIER LEAD-DEXING DEBORSU COMPLET
