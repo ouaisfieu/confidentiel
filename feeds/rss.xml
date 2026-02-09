@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Alertes Sociales Belgique</title>
+    <link>https://ouaisfieu.github.io/alertes-sociales/</link>
+    <description>Surveillance citoyenne des droits sociaux en Belgique. Coalition Arizona, moratoire Éducation Permanente, recours constitutionnels. Données ouvertes : https://yannkeep.github.io/alertes-sociales/</description>
+    <language>fr-be</language>
+    <copyright>CC BY-SA 4.0 Yan Doumont</copyright>
+    <pubDate>Sun, 09 Feb 2026 08:00:00 +0100</pubDate>
+    <lastBuildDate>Sun, 09 Feb 2026 08:00:00 +0100</lastBuildDate>
+    <atom:link href="https://ouaisfieu.github.io/alertes-sociales/feeds/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://yannkeep.github.io/alertes-sociales/" rel="related" title="Données ouvertes"/>
+    
+    <item>
+      <title>Le démantèlement orchestré</title>
+      <link>https://ouaisfieu.github.io/alertes-sociales/articles/demantelement-orchestree.html</link>
+      <description>Quand l'État fabrique des exclus et leur retire les outils de résistance. 184 463 exclusions chômage, 270 associations EP gelées, article 23 violé.</description>
+      <dc:creator>Yan Doumont</dc:creator>
+      <pubDate>Sun, 09 Feb 2026 08:00:00 +0100</pubDate>
+      <guid isPermaLink="true">https://ouaisfieu.github.io/alertes-sociales/articles/demantelement-orchestree.html</guid>
+      <category>Coalition Arizona</category>
+      <category>Éducation Permanente</category>
+      <category>Article 23</category>
+    </item>
+    
+    <item>
+      <title>La dépossession du pouvoir d'agir (1980-2026)</title>
+      <link>https://ouaisfieu.github.io/alertes-sociales/articles/depossession-pouvoir-agir.html</link>
+      <description>VOKA, capture corporatiste, fracture numérique, concentration médiatique. 40 ans de recul démocratique en Belgique documentés.</description>
+      <dc:creator>Yan Doumont</dc:creator>
+      <pubDate>Sun, 09 Feb 2026 07:00:00 +0100</pubDate>
+      <guid isPermaLink="true">https://ouaisfieu.github.io/alertes-sociales/articles/depossession-pouvoir-agir.html</guid>
+      <category>VOKA</category>
+      <category>Néolibéralisme</category>
+      <category>Concentration médiatique</category>
+    </item>
+    
+    <item>
+      <title>Cartographie des médias et stratégie de publication</title>
+      <link>https://ouaisfieu.github.io/alertes-sociales/articles/strategie-medias-publication.html</link>
+      <description>Guide pratique : Le Soir, La Libre, Revue Nouvelle, Brussels Studies, Social Europe. 8+ canaux de publication pour lanceurs d'alerte.</description>
+      <dc:creator>Yan Doumont</dc:creator>
+      <pubDate>Sun, 09 Feb 2026 06:00:00 +0100</pubDate>
+      <guid isPermaLink="true">https://ouaisfieu.github.io/alertes-sociales/articles/strategie-medias-publication.html</guid>
+      <category>Médias belges</category>
+      <category>Publication</category>
+    </item>
+  </channel>
+</rss>

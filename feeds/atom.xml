@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr-BE">
+  <title>Alertes Sociales Belgique</title>
+  <subtitle>Surveillance citoyenne des droits sociaux en Belgique</subtitle>
+  <link href="https://ouaisfieu.github.io/alertes-sociales/" rel="alternate" type="text/html"/>
+  <link href="https://ouaisfieu.github.io/alertes-sociales/feeds/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://yannkeep.github.io/alertes-sociales/" rel="related" type="text/html" title="Données ouvertes"/>
+  <id>https://ouaisfieu.github.io/alertes-sociales/</id>
+  <updated>2026-02-09T08:00:00+01:00</updated>
+  <author>
+    <name>Yan Doumont</name>
+    <uri>https://ouaisfi.eu/</uri>
+  </author>
+  <rights>CC BY-SA 4.0</rights>
+  
+  <entry>
+    <title>Le démantèlement orchestré</title>
+    <link href="https://ouaisfieu.github.io/alertes-sociales/articles/demantelement-orchestree.html" rel="alternate" type="text/html"/>
+    <id>https://ouaisfieu.github.io/alertes-sociales/articles/demantelement-orchestree.html</id>
+    <published>2026-02-09T08:00:00+01:00</published>
+    <updated>2026-02-09T08:00:00+01:00</updated>
+    <author><name>Yan Doumont</name></author>
+    <summary>Quand l'État fabrique des exclus et leur retire les outils de résistance. 184 463 exclusions chômage, 270 associations EP gelées.</summary>
+    <category term="coalition-arizona"/>
+    <category term="education-permanente"/>
+  </entry>
+  
+  <entry>
+    <title>La dépossession du pouvoir d'agir (1980-2026)</title>
+    <link href="https://ouaisfieu.github.io/alertes-sociales/articles/depossession-pouvoir-agir.html" rel="alternate" type="text/html"/>
+    <id>https://ouaisfieu.github.io/alertes-sociales/articles/depossession-pouvoir-agir.html</id>
+    <published>2026-02-09T07:00:00+01:00</published>
+    <updated>2026-02-09T07:00:00+01:00</updated>
+    <author><name>Yan Doumont</name></author>
+    <summary>VOKA, capture corporatiste, fracture numérique, concentration médiatique. 40 ans de recul démocratique documentés.</summary>
+    <category term="voka"/>
+    <category term="neoliberalisme"/>
+  </entry>
+  
+  <entry>
+    <title>Cartographie des médias et stratégie de publication</title>
+    <link href="https://ouaisfieu.github.io/alertes-sociales/articles/strategie-medias-publication.html" rel="alternate" type="text/html"/>
+    <id>https://ouaisfieu.github.io/alertes-sociales/articles/strategie-medias-publication.html</id>
+    <published>2026-02-09T06:00:00+01:00</published>
+    <updated>2026-02-09T06:00:00+01:00</updated>
+    <author><name>Yan Doumont</name></author>
+    <summary>Guide pratique de publication : 8+ canaux exploitables pour lanceurs d'alerte en Belgique.</summary>
+    <category term="medias"/>
+  </entry>
+</feed>

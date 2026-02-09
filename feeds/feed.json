@@ -1,0 +1,39 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Alertes Sociales Belgique",
+  "home_page_url": "https://ouaisfieu.github.io/alertes-sociales/",
+  "feed_url": "https://ouaisfieu.github.io/alertes-sociales/feeds/feed.json",
+  "description": "Surveillance citoyenne des droits sociaux en Belgique",
+  "language": "fr-BE",
+  "authors": [{"name": "Yan Doumont", "url": "https://ouaisfi.eu/"}],
+  "hubs": [{"type": "data", "url": "https://yannkeep.github.io/alertes-sociales/"}],
+  "items": [
+    {
+      "id": "https://ouaisfieu.github.io/alertes-sociales/articles/demantelement-orchestree.html",
+      "url": "https://ouaisfieu.github.io/alertes-sociales/articles/demantelement-orchestree.html",
+      "title": "Le démantèlement orchestré",
+      "summary": "Quand l'État fabrique des exclus et leur retire les outils de résistance. 184 463 exclusions chômage, 270 associations EP gelées.",
+      "date_published": "2026-02-09T08:00:00+01:00",
+      "authors": [{"name": "Yan Doumont"}],
+      "tags": ["coalition-arizona", "education-permanente", "article-23"]
+    },
+    {
+      "id": "https://ouaisfieu.github.io/alertes-sociales/articles/depossession-pouvoir-agir.html",
+      "url": "https://ouaisfieu.github.io/alertes-sociales/articles/depossession-pouvoir-agir.html",
+      "title": "La dépossession du pouvoir d'agir (1980-2026)",
+      "summary": "VOKA, capture corporatiste, fracture numérique, concentration médiatique. 40 ans de recul démocratique documentés.",
+      "date_published": "2026-02-09T07:00:00+01:00",
+      "authors": [{"name": "Yan Doumont"}],
+      "tags": ["voka", "neoliberalisme", "medias"]
+    },
+    {
+      "id": "https://ouaisfieu.github.io/alertes-sociales/articles/strategie-medias-publication.html",
+      "url": "https://ouaisfieu.github.io/alertes-sociales/articles/strategie-medias-publication.html",
+      "title": "Cartographie des médias et stratégie de publication",
+      "summary": "Guide pratique de publication : 8+ canaux exploitables pour lanceurs d'alerte en Belgique.",
+      "date_published": "2026-02-09T06:00:00+01:00",
+      "authors": [{"name": "Yan Doumont"}],
+      "tags": ["medias", "publication"]
+    }
+  ]
+}
