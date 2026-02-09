@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Guerre du récit 舆论战 — Fiche tactique complète | OSINT, lead-dexing, cascade médiatique</title>
+    <meta name="description" content="Guide complet de la Guerre du récit (舆论战) : collecte OSINT, cartographie des acteurs, lead-dexing, contre-récit par la preuve, protocole de publication en cascade. Première des Trois Guerres Civiques.">
+    <meta name="keywords" content="guerre du récit, 舆论战, OSINT citoyen, lead-dexing, cartographie acteurs, contre-récit, cascade médiatique, preuves ouvertes, Moniteur Belge, Cumuleo, intelligence civile">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://ouaisfieu.github.io/confidentiel/claude/guerre-recit.html">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ouaisfieu.github.io/confidentiel/claude/guerre-recit.html">
+    <meta property="og:title" content="Guerre du récit 舆论战 — Fiche tactique complète">
+    <meta property="og:description" content="OSINT, lead-dexing, contre-récit par la preuve, cascade médiatique. Guide opérationnel de la première Guerre Civique.">
+    <meta property="og:site_name" content="ouaisfi.eu">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "@id": "https://ouaisfieu.github.io/confidentiel/claude/guerre-recit.html#article",
+        "headline": "Guerre du récit 舆论战 — Fiche tactique complète",
+        "alternativeHeadline": "OSINT, lead-dexing, contre-récit par la preuve",
+        "description": "Guide complet de la première des Trois Guerres Civiques : collecte OSINT, cartographie des acteurs, protocole de publication en cascade",
+        "inLanguage": "fr-BE",
+        "datePublished": "2026-02",
+        "dateModified": "2026-02-09",
+        "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "Toolkit 三种公民战法",
+            "url": "https://ouaisfieu.github.io/confidentiel/claude/"
+        },
+        "mainEntity": {
+            "@type": "DefinedTerm",
+            "@id": "#definition",
+            "name": "Guerre du récit",
+            "alternateName": ["舆论战", "Yúlùn zhàn", "Public opinion warfare"],
+            "termCode": "GUERRE-I",
+            "description": "Stratégie visant à installer un contre-récit documenté dans l'espace public par la collecte de preuves ouvertes (OSINT), le lead-dexing des acteurs et la diffusion en cascade",
+            "inDefinedTermSet": "https://ouaisfieu.github.io/confidentiel/claude/glossaire.html",
+            "sameAs": "https://www.wikidata.org/wiki/Q1146619"
+        },
+        "about": [
+            {"@type": "Thing", "name": "OSINT", "sameAs": "https://www.wikidata.org/wiki/Q1572459"},
+            {"@type": "Thing", "name": "Lead-dexing"},
+            {"@type": "Thing", "name": "Cascade médiatique"}
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://ouaisfieu.github.io/confidentiel/claude/guerre-recit.html#faq",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Qu'est-ce que la Guerre du récit (舆论战) ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La Guerre du récit (舆论战, yúlùn zhàn) est la première des Trois Guerres Civiques. C'est une stratégie visant à installer un contre-récit documenté dans l'espace public. Elle s'appuie sur trois piliers : la collecte de preuves ouvertes (OSINT), le lead-dexing des acteurs de pouvoir, et la diffusion en cascade (académique → presse → viral). L'objectif est de rendre visible ce que le récit dominant occulte."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quelles sont les sources OSINT utiles en Belgique ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "En Belgique, les principales sources OSINT pour la surveillance citoyenne sont : le Moniteur Belge (ejustice.just.fgov.be), Cumuleo pour les mandats des élus, la BCE (Banque-Carrefour des Entreprises), le registre de transparence de l'UE, la FSMA pour les données financières, les greffes des tribunaux de commerce, et le cadastre des mandats. Il faut archiver via Wayback Machine et screenshots horodatés."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment fonctionne le lead-dexing ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Le lead-dexing est une technique de documentation systématique des acteurs de pouvoir. Pour chaque personne, on documente : parcours professionnel, mandats actuels et passés, appartenances à des conseils d'administration, passages cabinet-privé (portes tournantes), déclarations publiques sourcées, conflits d'intérêts potentiels. Ces fiches permettent de nommer et cartographier l'adversaire systémique."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Qu'est-ce que la publication en cascade ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La publication en cascade est un protocole de diffusion maximale : 1) Publication académique peer-reviewed (Revue Nouvelle, Brussels Studies) pour la légitimité, 2) Carte blanche presse nationale (Le Soir, La Libre) pour la visibilité, 3) Version internationale anglophone (Social Europe), 4) Communiqué Belga pour les reprises, 5) Relais spécialisés (Alter Échos, Médor), 6) Viralité sociale avec visuels et données téléchargeables."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment construire un contre-récit efficace ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Un contre-récit efficace suit cinq étapes : 1) Identifier le récit dominant et ses failles factuelles, 2) Rassembler les preuves OSINT qui le contredisent, 3) Structurer une timeline factuelle sourcée, 4) Produire un dossier de synthèse accessible (chiffres clés, visualisations), 5) Diffuser via cascade médiatique. Le contre-récit doit être factuel, sourcé et vérifiable — pas une opinion mais une documentation."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "@id": "https://ouaisfieu.github.io/confidentiel/claude/guerre-recit.html#howto-osint",
+        "name": "Comment collecter des preuves OSINT en Belgique",
+        "description": "Protocole de veille et d'archivage des preuves ouvertes pour documentation citoyenne",
+        "step": [
+            {"@type": "HowToStep", "position": 1, "name": "Monitorer", "text": "Surveiller Moniteur Belge, EJUSTICE, Cumuleo, BCE, registre transparence UE quotidiennement"},
+            {"@type": "HowToStep", "position": 2, "name": "Archiver", "text": "Sauvegarder via Wayback Machine + screenshots horodatés + hash SHA256 pour preuve d'intégrité"},
+            {"@type": "HowToStep", "position": 3, "name": "Croiser", "text": "Vérifier chaque information via au moins deux sources indépendantes"},
+            {"@type": "HowToStep", "position": 4, "name": "Documenter", "text": "Collecter verbatims avec date, lieu, contexte, lien archive"},
+            {"@type": "HowToStep", "position": 5, "name": "Formaliser", "text": "Produire rapport avec méthodologie explicite et reproductible (modèle Bellingcat)"}
+        ],
+        "tool": [
+            {"@type": "HowToTool", "name": "Wayback Machine (archive.org)"},
+            {"@type": "HowToTool", "name": "Moniteur Belge (ejustice.just.fgov.be)"},
+            {"@type": "HowToTool", "name": "Cumuleo (cumuleo.be)"},
+            {"@type": "HowToTool", "name": "BCE (kbopub.economie.fgov.be)"}
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Manifeste", "item": "https://ouaisfieu.github.io/confidentiel/"},
+            {"@type": "ListItem", "position": 2, "name": "Toolkit", "item": "https://ouaisfieu.github.io/confidentiel/claude/"},
+            {"@type": "ListItem", "position": 3, "name": "Guerre du récit", "item": "https://ouaisfieu.github.io/confidentiel/claude/guerre-recit.html"}
+        ]
+    }
+    </script>
+    
+    <style>
+        :root { --bg:#0a0a0a; --surface:#111; --border:#2a2a2a; --text:#e0e0e0; --muted:#888; --red:#dc2626; --red-dim:rgba(220,38,38,0.15); }
+        * { box-sizing:border-box; margin:0; padding:0; }
+        body { font-family:system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+        .container { max-width:800px; margin:0 auto; padding:2rem 1.5rem; }
+        header { border-bottom:1px solid var(--border); padding-bottom:1rem; margin-bottom:2rem; }
+        nav { font-size:0.8125rem; margin-bottom:1rem; }
+        nav a { color:var(--muted); text-decoration:none; margin-right:1rem; }
+        nav a:hover { color:var(--text); }
+        .badge { display:inline-block; font-family:monospace; font-size:0.75rem; background:var(--red); color:#fff; padding:0.25rem 0.5rem; margin-bottom:1rem; }
+        h1 { font-size:2rem; line-height:1.2; margin-bottom:0.5rem; }
+        h1 .zh { color:var(--red); }
+        .lead { font-size:1.125rem; color:var(--muted); margin-bottom:2rem; }
+        h2 { font-size:1.25rem; margin:2.5rem 0 1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border); }
+        h3 { font-size:1rem; margin:1.5rem 0 0.75rem; color:var(--red); }
+        p { margin-bottom:1rem; }
+        ul, ol { margin:1rem 0; padding-left:1.5rem; }
+        li { margin-bottom:0.5rem; }
+        .box { background:var(--surface); border:1px solid var(--border); padding:1.5rem; margin:1.5rem 0; }
+        .box.red { border-left:4px solid var(--red); }
+        .box h4 { font-size:0.875rem; margin-bottom:0.75rem; }
+        .steps { list-style:none; padding:0; counter-reset:step; }
+        .steps li { counter-increment:step; padding:0.75rem 0 0.75rem 3rem; position:relative; border-bottom:1px solid var(--border); }
+        .steps li:last-child { border:none; }
+        .steps li::before { content:counter(step, decimal-leading-zero); position:absolute; left:0; font-family:monospace; font-size:0.875rem; color:var(--red); font-weight:700; }
+        .faq { margin-top:3rem; }
+        .faq-item { border-bottom:1px solid var(--border); padding:1rem 0; }
+        .faq-q { font-weight:600; margin-bottom:0.5rem; }
+        .faq-a { color:var(--muted); font-size:0.9375rem; }
+        footer { margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border); text-align:center; font-size:0.8125rem; color:var(--muted); }
+        footer a { color:var(--red); text-decoration:none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="https://ouaisfieu.github.io/confidentiel/">← Manifeste</a>
+                <a href="./">Toolkit</a>
+                <a href="glossaire.html">Glossaire</a>
+                <a href="guerre-desideration.html">Guerre II →</a>
+            </nav>
+            <span class="badge">GUERRE-I</span>
+            <h1>Guerre du récit <span class="zh">舆论战</span></h1>
+            <p class="lead">Installer un contre-récit documenté dans l'espace public par la collecte de preuves ouvertes, le lead-dexing et la diffusion en cascade.</p>
+        </header>
+        
+        <main>
+            <section id="definition">
+                <h2>Définition</h2>
+                <p>La <strong>Guerre du récit</strong> (舆论战, yúlùn zhàn) est la première des Trois Guerres Civiques. Dans le modèle chinois original, elle vise à contrôler l'opinion publique par la propagande d'État. Dans notre transposition civique inversée, elle vise à <strong>rendre visible ce que le récit dominant occulte</strong>.</p>
+                <p>L'objectif n'est pas de créer une contre-propagande, mais de documenter factuellement ce qui est invisibilisé : les trajectoires des acteurs de pouvoir, leurs conflits d'intérêts, les décisions prises dans l'opacité.</p>
+            </section>
+            
+            <section>
+                <h2>Pilier 1 : Collecte OSINT</h2>
+                <p>L'OSINT (Open Source Intelligence) consiste à collecter et analyser des informations publiquement accessibles. En Belgique, les sources clés sont :</p>
+                <ul>
+                    <li><strong>Moniteur Belge</strong> (ejustice.just.fgov.be) — Nominations, arrêtés, lois</li>
+                    <li><strong>Cumuleo</strong> — Mandats des élus et mandataires publics</li>
+                    <li><strong>BCE</strong> (Banque-Carrefour des Entreprises) — Statuts, administrateurs</li>
+                    <li><strong>FSMA</strong> — Données financières réglementées</li>
+                    <li><strong>Registre de transparence UE</strong> — Lobbying européen</li>
+                    <li><strong>Greffes des tribunaux de commerce</strong> — Comptes annuels, PV</li>
+                </ul>
+                
+                <div class="box red">
+                    <h4>Protocole d'archivage</h4>
+                    <ol class="steps">
+                        <li>Sauvegarder via <strong>Wayback Machine</strong> (archive.org)</li>
+                        <li>Prendre <strong>screenshot horodaté</strong> (avec URL visible)</li>
+                        <li>Calculer <strong>hash SHA256</strong> du fichier pour preuve d'intégrité</li>
+                        <li>Stocker avec <strong>métadonnées</strong> : date, source, contexte</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Pilier 2 : Lead-dexing</h2>
+                <p>Le lead-dexing est la documentation systématique des acteurs de pouvoir. Pour chaque personne, créer une fiche contenant :</p>
+                <ul>
+                    <li>Parcours professionnel complet</li>
+                    <li>Mandats actuels et passés (Cumuleo)</li>
+                    <li>Conseils d'administration</li>
+                    <li>Passages cabinet → privé (portes tournantes)</li>
+                    <li>Déclarations publiques sourcées (verbatims)</li>
+                    <li>Conflits d'intérêts documentés</li>
+                    <li>Réseau (liens avec autres acteurs cartographiés)</li>
+                </ul>
+                <p>Ces fiches permettent de <strong>nommer l'adversaire systémique</strong> — pas comme individu isolé mais comme nœud dans un réseau de pouvoir.</p>
+            </section>
+            
+            <section>
+                <h2>Pilier 3 : Diffusion en cascade</h2>
+                <p>Un contre-récit documenté ne sert à rien s'il reste invisible. Le protocole de diffusion en cascade maximise l'impact :</p>
+                
+                <div class="box">
+                    <h4>Protocole de publication en cascade</h4>
+                    <ol class="steps">
+                        <li><strong>Publication académique</strong> — Revue Nouvelle, Brussels Studies (15-35k signes, peer-review, légitimité)</li>
+                        <li><strong>Carte blanche presse</strong> — Le Soir + La Libre simultanément (500-1000 mots, desk Débats)</li>
+                        <li><strong>Version internationale</strong> — Social Europe, openDemocracy (700-1000 mots, anglais)</li>
+                        <li><strong>Communiqué Belga</strong> — info@belga.be (signaler la publication pour reprises)</li>
+                        <li><strong>Relais spécialisés</strong> — Alter Échos, Politique, Médor (profondeur sectorielle)</li>
+                        <li><strong>Amplification sociale</strong> — Threads, visuels, datasets téléchargeables</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Articulation avec les autres guerres</h2>
+                <p>La Guerre du récit <strong>fournit le cadre</strong> aux deux autres guerres :</p>
+                <ul>
+                    <li>Elle alimente la <a href="guerre-desideration.html">Guerre de la dé-sidération</a> en matériau pédagogique</li>
+                    <li>Elle amplifie les victoires de la <a href="guerre-pretoire.html">Guerre du prétoire</a></li>
+                    <li>Elle documente les preuves utilisables en contentieux stratégique</li>
+                </ul>
+            </section>
+            
+            <section class="faq" id="faq">
+                <h2>Questions fréquentes</h2>
+                
+                <div class="faq-item">
+                    <p class="faq-q">Qu'est-ce que la Guerre du récit (舆论战) ?</p>
+                    <p class="faq-a">La Guerre du récit est la première des Trois Guerres Civiques. C'est une stratégie visant à installer un contre-récit documenté dans l'espace public, par la collecte de preuves ouvertes (OSINT), le lead-dexing des acteurs et la diffusion en cascade.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <p class="faq-q">Comment construire un contre-récit efficace ?</p>
+                    <p class="faq-a">Un contre-récit efficace est factuel, sourcé et vérifiable. Il identifie les failles du récit dominant, rassemble les preuves OSINT, structure une timeline factuelle, et diffuse via cascade médiatique.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <p class="faq-q">Les preuves OSINT sont-elles admissibles en justice ?</p>
+                    <p class="faq-a">Oui, à condition de respecter la chaîne de custody : archivage horodaté, hash d'intégrité, méthodologie documentée. Précédent : les rapports Bellingcat admis à la CPI.</p>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <a href="./">Toolkit</a> · 
+            <a href="guerre-desideration.html">Guerre II 心理战</a> · 
+            <a href="guerre-pretoire.html">Guerre III 法律战</a> · 
+            <a href="https://ouaisfieu.github.io/alertes-sociales/">Alertes Sociales</a>
+        </footer>
+    </div>
+</body>
+</html>

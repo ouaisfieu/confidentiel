@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ouaisfieu.github.io/confidentiel/claude/sitemap.xml
+
+# Toolkit opérationnel des Trois Guerres Civiques
+# Partie de l'écosystème ouaisfi.eu
+#
+# Projets liés:
+# https://ouaisfieu.github.io/confidentiel/ (Manifeste)
+# https://ouaisfieu.github.io/alertes-sociales/
+# https://yannkeep.github.io/alertes-sociales/
+# https://ouaisfi.eu/
