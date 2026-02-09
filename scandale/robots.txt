@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ouaisfieu.github.io/confidentiel/scandale/sitemap.xml
+
+# Dossier Scandale — Case Study Deborsu
+# Partie de l'écosystème Trois Guerres Civiques
+#
+# Écosystème:
+# https://ouaisfieu.github.io/confidentiel/ (Manifeste)
+# https://ouaisfieu.github.io/confidentiel/claude/ (Toolkit)
+# https://yannkeep.github.io/confidentiel/claude/ (Data Hub)
+# https://ouaisfieu.github.io/alertes-sociales/
+# https://yannkeep.github.io/alertes-sociales/
+# https://ouaisfi.eu/
