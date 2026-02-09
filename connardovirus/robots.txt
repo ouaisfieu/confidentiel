@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ouaisfieu.github.io/confidentiel/connardovirus/sitemap.xml
+
+# CONNARDOVIRUS — Ingénierie de la viralité
+# Module de guerre informationnelle citoyenne
+#
+# Écosystème:
+# https://ouaisfieu.github.io/confidentiel/ (Manifeste)
+# https://ouaisfieu.github.io/confidentiel/claude/ (Toolkit)
+# https://ouaisfieu.github.io/confidentiel/scandale/ (Dossier Scandale)
+# https://yannkeep.github.io/confidentiel/claude/ (Data Hub)
+# https://ouaisfi.eu/

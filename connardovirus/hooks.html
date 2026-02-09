@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Anatomie du hook parfait — Les 3 secondes qui décident tout | CONNARDOVIRUS</title>
+    <meta name="description" content="Comment créer un hook viral : pattern interrupt, curiosity gap, 12 formules qui fonctionnent. Les 3 premières secondes décident de 80% du succès d'un contenu. Exemples et templates.">
+    <meta name="keywords" content="hook viral, accroche contenu, pattern interrupt, curiosity gap, formule hook, première phrase virale, engagement social media, attention réseaux sociaux">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://ouaisfieu.github.io/confidentiel/connardovirus/hooks.html">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Anatomie du hook parfait",
+        "description": "Les 3 secondes qui décident tout — Formules et exemples de hooks viraux",
+        "isPartOf": {"@type": "WebSite", "url": "https://ouaisfieu.github.io/confidentiel/connardovirus/"}
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Qu'est-ce qu'un hook en content marketing ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Un hook est la première phrase, image ou seconde de votre contenu — l'élément qui capture l'attention et force l'utilisateur à s'arrêter de scroller. Le hook décide de 80% du succès d'un contenu. Dans un feed infini, vous avez 1 à 3 secondes pour capturer l'attention avant que l'utilisateur ne passe au contenu suivant."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment fonctionne le 'pattern interrupt' ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Le pattern interrupt est une technique qui brise le schéma mental automatique de l'utilisateur. Le cerveau scrolle en mode automatique. Pour le forcer à s'arrêter, il faut créer une rupture : un visuel inattendu, une affirmation choquante, un format inhabituel. Le cerveau détecte l'anomalie et passe en mode conscient — c'est gagné, vous avez l'attention."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quelle est la différence entre un hook et un clickbait ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Le hook promet et délivre. Le clickbait promet et déçoit. Un bon hook crée une attente que le contenu satisfait. Le clickbait crée une attente démesurée que le contenu ne peut pas tenir. La différence est éthique et stratégique : le clickbait génère des clics mais détruit la confiance. Le bon hook construit une audience fidèle."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quelles sont les formules de hooks les plus efficaces ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Les 5 formules les plus efficaces sont : 1) Le chiffre choc ('€30 milliards. C'est le montant de...'), 2) La question provocante ('Pourquoi traque-t-on les pauvres ?'), 3) Le contraire ('Ce que les médias ne vous diront jamais'), 4) L'histoire personnelle ('Il y a 3 ans, j'ai découvert que...'), 5) La promesse directe ('Voici comment ils vous manipulent'). Chaque formule active un levier psychologique différent."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <style>
+        :root { --bg:#0a0a0a; --surface:#111; --border:#2a2a2a; --text:#e0e0e0; --muted:#888; --virus:#00ff41; --red:#dc2626; }
+        * { box-sizing:border-box; margin:0; padding:0; }
+        body { font-family:system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+        .container { max-width:900px; margin:0 auto; padding:2rem 1.5rem; }
+        header { border-bottom:1px solid var(--border); padding-bottom:1rem; margin-bottom:2rem; }
+        nav { font-size:0.8125rem; margin-bottom:1rem; }
+        nav a { color:var(--muted); text-decoration:none; margin-right:1rem; }
+        nav a:hover { color:var(--virus); }
+        .badge { display:inline-block; font-family:monospace; font-size:0.75rem; background:var(--virus); color:#000; padding:0.25rem 0.5rem; margin-bottom:1rem; }
+        h1 { font-size:1.75rem; margin-bottom:0.5rem; }
+        .lead { color:var(--muted); }
+        
+        h2 { font-size:1.25rem; margin:2rem 0 1rem; }
+        p { margin-bottom:1rem; }
+        
+        .hook-anatomy { background:var(--surface); border:1px solid var(--virus); padding:2rem; margin:2rem 0; }
+        .hook-anatomy h3 { color:var(--virus); margin-bottom:1.5rem; font-size:1rem; text-align:center; }
+        .anatomy-parts { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+        .anatomy-part { text-align:center; padding:1rem; border:1px solid var(--border); }
+        .anatomy-part .num { font-family:monospace; font-size:2rem; color:var(--virus); }
+        .anatomy-part .name { font-weight:600; margin:0.5rem 0 0.25rem; }
+        .anatomy-part .desc { font-size:0.75rem; color:var(--muted); }
+        
+        .formulas { margin:2rem 0; }
+        .formula-item { background:var(--surface); border:1px solid var(--border); padding:1.25rem; margin-bottom:1rem; }
+        .formula-item .num { font-family:monospace; font-size:0.6875rem; color:var(--virus); margin-bottom:0.5rem; }
+        .formula-item .template { font-size:1.125rem; font-weight:600; margin-bottom:0.75rem; }
+        .formula-item .example { background:var(--bg); border-left:3px solid var(--virus); padding:0.75rem 1rem; font-style:italic; font-size:0.9375rem; }
+        .formula-item .example .label { font-style:normal; font-size:0.625rem; color:var(--muted); letter-spacing:0.1em; margin-bottom:0.25rem; display:block; }
+        
+        .dont-do { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.5rem 0; }
+        .dont, .do { padding:1.25rem; border:1px solid var(--border); }
+        .dont { border-color:var(--red); }
+        .do { border-color:var(--virus); }
+        .dont h4 { color:var(--red); margin-bottom:0.75rem; }
+        .do h4 { color:var(--virus); margin-bottom:0.75rem; }
+        .dont ul, .do ul { margin-left:1.25rem; font-size:0.875rem; }
+        .dont li, .do li { margin-bottom:0.5rem; }
+        
+        footer { margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border); text-align:center; font-size:0.8125rem; color:var(--muted); }
+        footer a { color:var(--virus); text-decoration:none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="./">← Connardovirus</a>
+                <a href="declencheurs.html">Déclencheurs</a>
+                <a href="formats.html">Formats</a>
+                <a href="amplification.html">Amplification</a>
+            </nav>
+            <span class="badge">MODULE 03</span>
+            <h1>Anatomie du hook</h1>
+            <p class="lead">Les 3 secondes qui décident de tout</p>
+        </header>
+        
+        <main>
+            <p>Dans un feed infini, vous avez <strong>1 à 3 secondes</strong> pour capturer l'attention. Le hook est la différence entre un contenu vu par 100 personnes et un contenu vu par 100 000. Ce n'est pas un détail — c'est <strong>80% du succès</strong>.</p>
+            
+            <div class="hook-anatomy">
+                <h3>🪝 LES 3 COMPOSANTS DU HOOK PARFAIT</h3>
+                <div class="anatomy-parts">
+                    <div class="anatomy-part">
+                        <div class="num">01</div>
+                        <div class="name">PATTERN INTERRUPT</div>
+                        <div class="desc">Brise le scroll automatique. Élément visuel ou verbal inattendu.</div>
+                    </div>
+                    <div class="anatomy-part">
+                        <div class="num">02</div>
+                        <div class="name">CURIOSITY GAP</div>
+                        <div class="desc">Crée un manque. L'info incomplète force à continuer.</div>
+                    </div>
+                    <div class="anatomy-part">
+                        <div class="num">03</div>
+                        <div class="name">PROMESSE</div>
+                        <div class="desc">Bénéfice clair. Pourquoi je devrais m'arrêter ?</div>
+                    </div>
+                </div>
+            </div>
+            
+            <section>
+                <h2>Les 12 formules qui fonctionnent</h2>
+                <div class="formulas">
+                    <div class="formula-item">
+                        <div class="num">FORMULE 01 — LE CHIFFRE CHOC</div>
+                        <div class="template">[Chiffre énorme]. C'est [ce que ça représente].</div>
+                        <div class="example">
+                            <span class="label">EXEMPLE</span>
+                            "€30 milliards. C'est le montant de la fraude fiscale annuelle en Belgique. €250 millions pour la fraude sociale. Ratio : 120."
+                        </div>
+                    </div>
+                    
+                    <div class="formula-item">
+                        <div class="num">FORMULE 02 — LA QUESTION PROVOCANTE</div>
+                        <div class="template">Pourquoi [chose illogique/injuste] ?</div>
+                        <div class="example">
+                            <span class="label">EXEMPLE</span>
+                            "Pourquoi traque-t-on ceux qui fraudent €250M et pas ceux qui fraudent €30Mds ?"
+                        </div>
+                    </div>
+                    
+                    <div class="formula-item">
+                        <div class="num">FORMULE 03 — LE CONTRAIRE</div>
+                        <div class="template">Ce que [autorité] ne vous dira jamais sur [sujet].</div>
+                        <div class="example">
+                            <span class="label">EXEMPLE</span>
+                            "Ce que RTL ne vous dira jamais sur les liens familiaux de Christophe Deborsu."
+                        </div>
+                    </div>
+                    
+                    <div class="formula-item">
+                        <div class="num">FORMULE 04 — L'HISTOIRE</div>
+                        <div class="template">Il y a [temps], j'ai découvert que [révélation].</div>
+                        <div class="example">
+                            <span class="label">EXEMPLE</span>
+                            "Il y a 3 mois, j'ai découvert que la nièce du journaliste qui stigmatise les chômeurs est élue MR."
+                        </div>
+                    </div>
+                    
+                    <div class="formula-item">
+                        <div class="num">FORMULE 05 — LA PROMESSE DIRECTE</div>
+                        <div class="template">Voici comment [ils/système] [action négative].</div>
+                        <div class="example">
+                            <span class="label">EXEMPLE</span>
+                            "Voici comment un reportage RTL fabrique votre consentement à l'austérité."
+                        </div>
+                    </div>
+                    
+                    <div class="formula-item">
+                        <div class="num">FORMULE 06 — LE MYTHE BRISÉ</div>
+                        <div class="template">[Croyance commune] ? Faux. La réalité : [vérité].</div>
+                        <div class="example">
+                            <span class="label">EXEMPLE</span>
+                            "Les chômeurs sont des fraudeurs ? Faux. La fraude sociale = 0,3% du budget sécu."
+                        </div>
+                    </div>
+                    
+                    <div class="formula-item">
+                        <div class="num">FORMULE 07 — LA LISTE IMPAIRE</div>
+                        <div class="template">[Nombre impair] [choses] que [vous/ils] [verbe].</div>
+                        <div class="example">
+                            <span class="label">EXEMPLE</span>
+                            "7 techniques de manipulation utilisées dans le reportage 'Sans boulot : tous fraudeurs ?'"
+                        </div>
+                    </div>
+                    
+                    <div class="formula-item">
+                        <div class="num">FORMULE 08 — L'URGENCE</div>
+                        <div class="template">Dans [temps court], [conséquence]. [Action].</div>
+                        <div class="example">
+                            <span class="label">EXEMPLE</span>
+                            "Dans 48h, le CSA décide. Partagez avant qu'ils enterrent l'affaire."
+                        </div>
+                    </div>
+                    
+                    <div class="formula-item">
+                        <div class="num">FORMULE 09 — LE "PERSONNE NE PARLE DE"</div>
+                        <div class="template">Personne ne parle de [sujet]. Voici pourquoi.</div>
+                        <div class="example">
+                            <span class="label">EXEMPLE</span>
+                            "Personne ne parle du silence de la presse belge. Le Soir, La Libre, RTBF : 0 article critique."
+                        </div>
+                    </div>
+                    
+                    <div class="formula-item">
+                        <div class="num">FORMULE 10 — LA COMPARAISON</div>
+                        <div class="template">[A] vs [B]. La différence vous choquera.</div>
+                        <div class="example">
+                            <span class="label">EXEMPLE</span>
+                            "Fraude sociale vs fraude fiscale. Le ratio vous choquera : 1 pour 120."
+                        </div>
+                    </div>
+                    
+                    <div class="formula-item">
+                        <div class="num">FORMULE 11 — LE TÉMOIGNAGE</div>
+                        <div class="template">"[Citation choc]" — [Qui].</div>
+                        <div class="example">
+                            <span class="label">EXEMPLE</span>
+                            "'J'ai été interviewée 1 heure, ils ont gardé 10 secondes.' — Gaëlle Denys, CPAS Verviers."
+                        </div>
+                    </div>
+                    
+                    <div class="formula-item">
+                        <div class="num">FORMULE 12 — L'AVEU</div>
+                        <div class="template">J'ai [action controversée]. Voici ce que j'ai appris.</div>
+                        <div class="example">
+                            <span class="label">EXEMPLE</span>
+                            "J'ai regardé le reportage de Deborsu 5 fois. Voici les 7 manipulations que j'ai comptées."
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Hook vs Clickbait</h2>
+                <div class="dont-do">
+                    <div class="dont">
+                        <h4>❌ CLICKBAIT (ne fais pas)</h4>
+                        <ul>
+                            <li>Promet et déçoit</li>
+                            <li>"INCROYABLE !!!"</li>
+                            <li>Majuscules partout</li>
+                            <li>Mensonge ou exagération</li>
+                            <li>Détruit la confiance</li>
+                        </ul>
+                    </div>
+                    <div class="do">
+                        <h4>✓ BON HOOK (fais ça)</h4>
+                        <ul>
+                            <li>Promet et délivre</li>
+                            <li>Chiffre précis, fait vérifiable</li>
+                            <li>Mise en forme stratégique</li>
+                            <li>Curiosité légitime</li>
+                            <li>Construit l'autorité</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <a href="./">← Connardovirus</a> · 
+            <a href="amplification.html">Amplification →</a> · 
+            <a href="https://ouaisfieu.github.io/confidentiel/claude/">Toolkit</a>
+        </footer>
+    </div>
+</body>
+</html>

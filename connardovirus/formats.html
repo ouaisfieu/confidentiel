@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Formats viraux — Thread, carrousel, vidéo courte, meme | CONNARDOVIRUS</title>
+    <meta name="description" content="Guide des formats optimisés pour la viralité : thread Twitter (+287%), carrousel Instagram (×3.1), vidéo TikTok, meme, infographie. Architecture de la contagion par plateforme.">
+    <meta name="keywords" content="format viral, thread Twitter viral, carrousel Instagram, TikTok viral, meme viral, infographie virale, format contenu réseaux sociaux, engagement social media">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://ouaisfieu.github.io/confidentiel/connardovirus/formats.html">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Formats viraux — Architecture de la contagion",
+        "description": "Guide des formats de contenu optimisés pour la viralité par plateforme",
+        "isPartOf": {"@type": "WebSite", "url": "https://ouaisfieu.github.io/confidentiel/connardovirus/"}
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Combien de tweets pour un thread viral ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Un thread viral optimal contient 7 à 12 tweets. Moins de 5 tweets manque de substance, plus de 15 perd l'attention. La structure idéale : tweet 1 = hook choc, tweets 2-3 = contexte, tweets 4-8 = preuves/arguments, tweets 9-10 = climax/révélation, tweets 11-12 = conclusion + CTA (call to action). Les threads génèrent +287% d'engagement comparé aux tweets simples."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quelle est la longueur optimale d'une vidéo TikTok/Reels ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La longueur optimale est de 15 à 45 secondes. Les 3 premières secondes sont critiques : 65% des viewers abandonnent dans les 3 premières secondes si le hook n'est pas assez fort. Structure : seconde 0-3 = hook visuel choc, seconde 4-15 = développement rapide, seconde 16-30 = révélation, seconde 31+ = loop ou CTA. Le taux de completion (regarder jusqu'au bout) est le facteur clé de l'algorithme."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment créer un meme viral ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Un meme viral doit être compréhensible en moins de 2 secondes et partageable sans contexte. Structure : setup (attente) + punchline (rupture). Utilisez des templates connus pour réduire la charge cognitive. Le texte doit être minimal (max 2 lignes haut, 2 lignes bas). L'humour fonctionne mieux que le sérieux pur. Le meme doit permettre au partageur de paraître intelligent ou drôle."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Combien de slides pour un carrousel Instagram viral ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Un carrousel viral contient 7 à 10 slides. Les carrousels génèrent 3.1× plus d'engagement que les images simples. Structure : slide 1 = couverture accrocheuse (titre + visuel), slides 2-3 = problème/contexte, slides 4-7 = données/arguments (1 idée par slide), slide 8-9 = conclusion, slide 10 = CTA save/share. Le format portrait 1080×1350 est optimal."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <style>
+        :root { --bg:#0a0a0a; --surface:#111; --border:#2a2a2a; --text:#e0e0e0; --muted:#888; --virus:#00ff41; --twitter:#1da1f2; --insta:#e4405f; --tiktok:#ff0050; --linkedin:#0077b5; }
+        * { box-sizing:border-box; margin:0; padding:0; }
+        body { font-family:system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+        .container { max-width:900px; margin:0 auto; padding:2rem 1.5rem; }
+        header { border-bottom:1px solid var(--border); padding-bottom:1rem; margin-bottom:2rem; }
+        nav { font-size:0.8125rem; margin-bottom:1rem; }
+        nav a { color:var(--muted); text-decoration:none; margin-right:1rem; }
+        nav a:hover { color:var(--virus); }
+        .badge { display:inline-block; font-family:monospace; font-size:0.75rem; background:var(--virus); color:#000; padding:0.25rem 0.5rem; margin-bottom:1rem; }
+        h1 { font-size:1.75rem; margin-bottom:0.5rem; }
+        .lead { color:var(--muted); }
+        
+        h2 { font-size:1.25rem; margin:2rem 0 1rem; }
+        
+        .format { background:var(--surface); border:1px solid var(--border); margin:1.5rem 0; }
+        .format-header { padding:1.25rem 1.5rem; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:1rem; flex-wrap:wrap; }
+        .format-icon { font-size:1.5rem; }
+        .format-name { font-size:1.125rem; font-weight:600; flex:1; }
+        .format-platform { font-size:0.75rem; padding:0.25rem 0.5rem; border-radius:2px; }
+        .format-platform.twitter { background:var(--twitter); color:#fff; }
+        .format-platform.insta { background:var(--insta); color:#fff; }
+        .format-platform.tiktok { background:var(--tiktok); color:#fff; }
+        .format-platform.linkedin { background:var(--linkedin); color:#fff; }
+        .format-platform.all { background:var(--virus); color:#000; }
+        .format-body { padding:1.5rem; }
+        .format-stats { display:flex; gap:1.5rem; flex-wrap:wrap; margin-bottom:1rem; font-size:0.875rem; }
+        .format-stat { display:flex; align-items:center; gap:0.5rem; }
+        .format-stat .value { font-family:monospace; color:var(--virus); font-weight:600; }
+        .format-desc { margin-bottom:1rem; }
+        .format-structure { background:var(--bg); border:1px solid var(--border); padding:1rem; font-family:monospace; font-size:0.8125rem; }
+        .format-structure .step { margin-bottom:0.5rem; }
+        .format-structure .step:last-child { margin:0; }
+        .format-structure .num { color:var(--virus); }
+        
+        .comparison { overflow-x:auto; margin:2rem 0; }
+        .comparison table { width:100%; border-collapse:collapse; font-size:0.8125rem; }
+        .comparison th, .comparison td { padding:0.75rem; border:1px solid var(--border); text-align:left; }
+        .comparison th { background:var(--surface); color:var(--virus); }
+        
+        footer { margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border); text-align:center; font-size:0.8125rem; color:var(--muted); }
+        footer a { color:var(--virus); text-decoration:none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="./">← Connardovirus</a>
+                <a href="declencheurs.html">Déclencheurs</a>
+                <a href="hooks.html">Hooks</a>
+                <a href="amplification.html">Amplification</a>
+            </nav>
+            <span class="badge">MODULE 02</span>
+            <h1>Formats viraux</h1>
+            <p class="lead">Architecture de la contagion — Choisir le bon véhicule pour chaque plateforme</p>
+        </header>
+        
+        <main>
+            <p>Le même contenu dans deux formats différents peut avoir un facteur viral de <strong>1 à 10</strong>. Le format n'est pas un détail — c'est une arme.</p>
+            
+            <div class="format">
+                <div class="format-header">
+                    <span class="format-icon">🧵</span>
+                    <span class="format-name">THREAD</span>
+                    <span class="format-platform twitter">Twitter/X</span>
+                </div>
+                <div class="format-body">
+                    <div class="format-stats">
+                        <div class="format-stat"><span class="value">+287%</span> engagement vs tweet simple</div>
+                        <div class="format-stat"><span class="value">7-12</span> tweets optimal</div>
+                    </div>
+                    <p class="format-desc">Narration séquentielle optimisée pour l'engagement. Chaque tweet doit donner envie de lire le suivant. Le premier tweet (hook) détermine 80% du succès.</p>
+                    <div class="format-structure">
+                        <div class="step"><span class="num">1.</span> HOOK → Accroche choc, chiffre ou question</div>
+                        <div class="step"><span class="num">2-3.</span> CONTEXTE → Poser le problème</div>
+                        <div class="step"><span class="num">4-8.</span> PREUVES → Données, exemples, citations</div>
+                        <div class="step"><span class="num">9-10.</span> CLIMAX → Révélation principale</div>
+                        <div class="step"><span class="num">11-12.</span> CTA → "RT si vous êtes d'accord" / "Suivez pour la suite"</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="format">
+                <div class="format-header">
+                    <span class="format-icon">📱</span>
+                    <span class="format-name">CARROUSEL</span>
+                    <span class="format-platform insta">Instagram</span>
+                    <span class="format-platform linkedin">LinkedIn</span>
+                </div>
+                <div class="format-body">
+                    <div class="format-stats">
+                        <div class="format-stat"><span class="value">×3.1</span> engagement vs image simple</div>
+                        <div class="format-stat"><span class="value">7-10</span> slides optimal</div>
+                        <div class="format-stat"><span class="value">1080×1350</span> format portrait</div>
+                    </div>
+                    <p class="format-desc">Slides visuelles avec progression narrative. Une idée par slide. Le swipe crée l'engagement — chaque slide doit mériter le suivant.</p>
+                    <div class="format-structure">
+                        <div class="step"><span class="num">1.</span> COUVERTURE → Titre + visuel accrocheur</div>
+                        <div class="step"><span class="num">2-3.</span> PROBLÈME → "Saviez-vous que..."</div>
+                        <div class="step"><span class="num">4-7.</span> DONNÉES → 1 stat/argument par slide</div>
+                        <div class="step"><span class="num">8-9.</span> CONCLUSION → Synthèse</div>
+                        <div class="step"><span class="num">10.</span> CTA → "Enregistrez 📌 / Partagez ↗️"</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="format">
+                <div class="format-header">
+                    <span class="format-icon">🎬</span>
+                    <span class="format-name">VIDÉO COURTE</span>
+                    <span class="format-platform tiktok">TikTok</span>
+                    <span class="format-platform insta">Reels</span>
+                </div>
+                <div class="format-body">
+                    <div class="format-stats">
+                        <div class="format-stat"><span class="value">3 sec</span> seuil d'attention</div>
+                        <div class="format-stat"><span class="value">15-45s</span> longueur optimale</div>
+                        <div class="format-stat"><span class="value">9:16</span> format vertical</div>
+                    </div>
+                    <p class="format-desc">Hook dans les 3 premières secondes ou mort. 65% des viewers abandonnent avant la seconde 3. L'algorithme favorise le taux de completion (regarder jusqu'au bout).</p>
+                    <div class="format-structure">
+                        <div class="step"><span class="num">0-3s</span> HOOK → Visuel choc, texte à l'écran, mouvement</div>
+                        <div class="step"><span class="num">4-15s</span> DEVELOP → Explication rapide</div>
+                        <div class="step"><span class="num">16-30s</span> REVEAL → La révélation</div>
+                        <div class="step"><span class="num">31s+</span> LOOP/CTA → Recommencer ou appel à l'action</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="format">
+                <div class="format-header">
+                    <span class="format-icon">😤</span>
+                    <span class="format-name">MEME / VISUEL CHOC</span>
+                    <span class="format-platform all">Toutes</span>
+                </div>
+                <div class="format-body">
+                    <div class="format-stats">
+                        <div class="format-stat"><span class="value">&lt;2s</span> temps de lecture</div>
+                        <div class="format-stat"><span class="value">∞</span> potentiel viral si universel</div>
+                    </div>
+                    <p class="format-desc">Compréhensible instantanément, partageable sans contexte. Le meme permet au partageur de paraître intelligent ou drôle — c'est sa monnaie sociale.</p>
+                    <div class="format-structure">
+                        <div class="step"><span class="num">HAUT</span> SETUP → Créer l'attente</div>
+                        <div class="step"><span class="num">BAS</span> PUNCHLINE → Rupture comique ou choquante</div>
+                        <div class="step"><span class="num">RÈGLE</span> Max 2 lignes en haut, 2 lignes en bas</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="format">
+                <div class="format-header">
+                    <span class="format-icon">📊</span>
+                    <span class="format-name">INFOGRAPHIE COMPARATIVE</span>
+                    <span class="format-platform linkedin">LinkedIn</span>
+                    <span class="format-platform twitter">Twitter</span>
+                </div>
+                <div class="format-body">
+                    <div class="format-stats">
+                        <div class="format-stat"><span class="value">×3</span> partages vs texte seul</div>
+                        <div class="format-stat"><span class="value">1080×1350</span> ou carré</div>
+                    </div>
+                    <p class="format-desc">Données visualisées avec contraste maximal. Deux colonnes ou barres comparatives. Le chiffre choc doit sauter aux yeux.</p>
+                    <div class="format-structure">
+                        <div class="step"><span class="num">1.</span> TITRE → Question ou affirmation choc</div>
+                        <div class="step"><span class="num">2.</span> COMPARAISON → Deux colonnes avec contraste visuel fort</div>
+                        <div class="step"><span class="num">3.</span> SOURCE → Crédibilité en bas</div>
+                        <div class="step"><span class="num">4.</span> LOGO → Branding discret</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Matrice format × plateforme</h2>
+            <div class="comparison">
+                <table>
+                    <tr>
+                        <th>Format</th>
+                        <th>Twitter/X</th>
+                        <th>Instagram</th>
+                        <th>LinkedIn</th>
+                        <th>TikTok</th>
+                    </tr>
+                    <tr>
+                        <td>Thread</td>
+                        <td>⭐⭐⭐</td>
+                        <td>—</td>
+                        <td>⭐⭐</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Carrousel</td>
+                        <td>⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐</td>
+                    </tr>
+                    <tr>
+                        <td>Vidéo courte</td>
+                        <td>⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>Meme</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐</td>
+                        <td>⭐</td>
+                        <td>⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>Infographie</td>
+                        <td>⭐⭐</td>
+                        <td>⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        
+        <footer>
+            <a href="./">← Connardovirus</a> · 
+            <a href="hooks.html">Hooks →</a> · 
+            <a href="https://ouaisfieu.github.io/confidentiel/claude/">Toolkit</a>
+        </footer>
+    </div>
+</body>
+</html>

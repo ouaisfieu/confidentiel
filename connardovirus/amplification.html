@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Amplification — Timing, hashtags, communautés, cascade | CONNARDOVIRUS</title>
+    <meta name="description" content="Stratégies d'amplification virale : meilleurs moments de publication (mardi 9h-12h), hashtags stratégiques, communautés relais, effet cascade. Maximiser la propagation.">
+    <meta name="keywords" content="amplification virale, meilleur moment publier Twitter, hashtags viraux, communautés relais, cascade virale, timing réseaux sociaux, propagation contenu">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://ouaisfieu.github.io/confidentiel/connardovirus/amplification.html">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Amplification — Stratégies de propagation contrôlée",
+        "description": "Timing, hashtags, communautés, cascade — Maximiser la portée d'un contenu",
+        "isPartOf": {"@type": "WebSite", "url": "https://ouaisfieu.github.io/confidentiel/connardovirus/"}
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Quel est le meilleur moment pour publier sur Twitter/X ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pour un public francophone, les meilleurs créneaux sont : mardi, mercredi et jeudi entre 9h et 12h. Le mardi est statistiquement le jour avec le plus d'engagement. À éviter : week-end (sauf actualité chaude), lundi matin (boîte mail), vendredi après-midi (déconnexion). Pour le contenu politique/social, viser les moments de pause (9h café, 12h-14h déjeuner, 18h-20h transport)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment utiliser les hashtags stratégiquement ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La règle des 3 types : 1) 1-2 hashtags de niche (votre communauté), 2) 1-2 hashtags tendance (actualité), 3) 1 hashtag de marque (votre campagne). Sur Twitter, 2-3 hashtags maximum. Sur Instagram, jusqu'à 10. Les hashtags doivent être pertinents et non spammés. Créer un hashtag de campagne unique permet de tracker la propagation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment créer un effet cascade viral ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "L'effet cascade repose sur les relais : 1) Identifiez 5-10 comptes 'super-diffuseurs' dans votre niche (10k-50k followers engagés), 2) Engagez avec eux AVANT votre publication, 3) Publiez et taguez-les ou DM direct, 4) Si 2-3 d'entre eux partagent, vous atteignez leurs audiences, 5) L'algorithme détecte l'engagement rapide et amplifie. C'est le 'tipping point' — le moment où la viralité devient autonome."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment identifier les communautés relais ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Les communautés relais sont des groupes qui partageront naturellement votre contenu s'il correspond à leurs valeurs. Pour un contenu sur la fraude sociale vs fiscale : syndicats (CSC, FGTB), associations anti-pauvreté (ATD Quart Monde), médias alternatifs (Alter Échos, Médor), comptes militants de gauche. Listez 20-30 comptes, engagez régulièrement avec eux, et ils deviendront vos amplificateurs naturels."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <style>
+        :root { --bg:#0a0a0a; --surface:#111; --border:#2a2a2a; --text:#e0e0e0; --muted:#888; --virus:#00ff41; }
+        * { box-sizing:border-box; margin:0; padding:0; }
+        body { font-family:system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+        .container { max-width:900px; margin:0 auto; padding:2rem 1.5rem; }
+        header { border-bottom:1px solid var(--border); padding-bottom:1rem; margin-bottom:2rem; }
+        nav { font-size:0.8125rem; margin-bottom:1rem; }
+        nav a { color:var(--muted); text-decoration:none; margin-right:1rem; }
+        nav a:hover { color:var(--virus); }
+        .badge { display:inline-block; font-family:monospace; font-size:0.75rem; background:var(--virus); color:#000; padding:0.25rem 0.5rem; margin-bottom:1rem; }
+        h1 { font-size:1.75rem; margin-bottom:0.5rem; }
+        .lead { color:var(--muted); }
+        
+        h2 { font-size:1.25rem; margin:2rem 0 1rem; }
+        p { margin-bottom:1rem; }
+        
+        .timing-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:0.25rem; margin:1.5rem 0; font-size:0.75rem; }
+        .timing-header { background:var(--surface); padding:0.5rem; text-align:center; font-weight:600; }
+        .timing-cell { background:var(--surface); padding:0.5rem; text-align:center; border:1px solid var(--border); }
+        .timing-cell.hot { background:rgba(0,255,65,0.2); border-color:var(--virus); }
+        .timing-cell.warm { background:rgba(0,255,65,0.1); }
+        .timing-cell.cold { opacity:0.5; }
+        
+        .section-box { background:var(--surface); border:1px solid var(--border); padding:1.5rem; margin:1.5rem 0; }
+        .section-box h3 { color:var(--virus); margin-bottom:1rem; font-size:1rem; }
+        
+        .checklist { list-style:none; margin:1rem 0; }
+        .checklist li { padding:0.5rem 0 0.5rem 1.75rem; position:relative; border-bottom:1px solid var(--border); }
+        .checklist li:last-child { border:none; }
+        .checklist li::before { content:'▸'; position:absolute; left:0; color:var(--virus); }
+        
+        .cascade { display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; margin:1rem 0; font-family:monospace; font-size:0.875rem; }
+        .cascade .step { background:var(--surface); border:1px solid var(--border); padding:0.5rem 1rem; }
+        .cascade .arrow { color:var(--virus); }
+        
+        .hashtag-strategy { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; margin:1rem 0; }
+        .hashtag-type { background:var(--surface); border:1px solid var(--border); padding:1rem; }
+        .hashtag-type h4 { font-size:0.875rem; margin-bottom:0.5rem; color:var(--virus); }
+        .hashtag-type p { font-size:0.8125rem; color:var(--muted); margin:0; }
+        .hashtag-type .examples { font-family:monospace; font-size:0.75rem; margin-top:0.5rem; }
+        
+        footer { margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border); text-align:center; font-size:0.8125rem; color:var(--muted); }
+        footer a { color:var(--virus); text-decoration:none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="./">← Connardovirus</a>
+                <a href="declencheurs.html">Déclencheurs</a>
+                <a href="formats.html">Formats</a>
+                <a href="hooks.html">Hooks</a>
+            </nav>
+            <span class="badge">MODULE 04</span>
+            <h1>Amplification</h1>
+            <p class="lead">Timing, hashtags, communautés, cascade — Propagation contrôlée</p>
+        </header>
+        
+        <main>
+            <p>Un contenu parfait publié au mauvais moment meurt. L'amplification est la <strong>science de la propagation</strong> : quand publier, comment taguer, qui activer, comment déclencher la cascade.</p>
+            
+            <section>
+                <h2>⏰ Timing optimal (Twitter/X — Europe francophone)</h2>
+                <div class="timing-grid">
+                    <div class="timing-header">LUN</div>
+                    <div class="timing-header">MAR</div>
+                    <div class="timing-header">MER</div>
+                    <div class="timing-header">JEU</div>
+                    <div class="timing-header">VEN</div>
+                    <div class="timing-header">SAM</div>
+                    <div class="timing-header">DIM</div>
+                    
+                    <div class="timing-cell cold">9-12h<br>⚠️ boîte mail</div>
+                    <div class="timing-cell hot">9-12h<br>⭐ OPTIMAL</div>
+                    <div class="timing-cell hot">9-12h<br>⭐ OPTIMAL</div>
+                    <div class="timing-cell warm">9-12h<br>✓ Bon</div>
+                    <div class="timing-cell cold">9-12h<br>⚠️ déconnexion</div>
+                    <div class="timing-cell cold">9-12h<br>❌ week-end</div>
+                    <div class="timing-cell cold">9-12h<br>❌ week-end</div>
+                    
+                    <div class="timing-cell warm">12-14h<br>✓ Bon</div>
+                    <div class="timing-cell hot">12-14h<br>⭐ Déjeuner</div>
+                    <div class="timing-cell hot">12-14h<br>⭐ Déjeuner</div>
+                    <div class="timing-cell warm">12-14h<br>✓ Bon</div>
+                    <div class="timing-cell cold">12-14h<br>⚠️</div>
+                    <div class="timing-cell cold">12-14h<br>❌</div>
+                    <div class="timing-cell cold">12-14h<br>❌</div>
+                    
+                    <div class="timing-cell warm">18-20h<br>✓ Transport</div>
+                    <div class="timing-cell warm">18-20h<br>✓ Transport</div>
+                    <div class="timing-cell warm">18-20h<br>✓ Transport</div>
+                    <div class="timing-cell warm">18-20h<br>✓ Transport</div>
+                    <div class="timing-cell cold">18-20h<br>⚠️ week-end</div>
+                    <div class="timing-cell cold">18-20h<br>❌</div>
+                    <div class="timing-cell warm">18-20h<br>✓ Soir</div>
+                </div>
+                <p><strong>Règle d'or :</strong> Mardi et mercredi 9h-12h = pic d'engagement. Exception : actualité chaude = publier immédiatement.</p>
+            </section>
+            
+            <section>
+                <h2>#️⃣ Stratégie hashtags</h2>
+                <div class="hashtag-strategy">
+                    <div class="hashtag-type">
+                        <h4>TYPE 1 — NICHE</h4>
+                        <p>Votre communauté. Engagement élevé, volume faible.</p>
+                        <div class="examples">#FraudeFiscale #JusticeSociale #PrécaritéBE</div>
+                    </div>
+                    <div class="hashtag-type">
+                        <h4>TYPE 2 — TENDANCE</h4>
+                        <p>Actualité. Volume élevé, concurrence forte.</p>
+                        <div class="examples">#Deborsu #RTL #Arizona2026</div>
+                    </div>
+                    <div class="hashtag-type">
+                        <h4>TYPE 3 — CAMPAGNE</h4>
+                        <p>Votre marque. Unique, trackable.</p>
+                        <div class="examples">#MRTL #Ratio120 #Connardovirus</div>
+                    </div>
+                </div>
+                <p><strong>Dosage :</strong> Twitter = 2-3 hashtags max. Instagram = 5-10. LinkedIn = 3-5.</p>
+            </section>
+            
+            <section>
+                <h2>🔗 Communautés relais (exemple Deborsu)</h2>
+                <div class="section-box">
+                    <h3>Cibles d'amplification prioritaires</h3>
+                    <ul class="checklist">
+                        <li><strong>Syndicats</strong> — CSC, FGTB, CGSLB : partagent spontanément contenu anti-austérité</li>
+                        <li><strong>Associations anti-pauvreté</strong> — ATD Quart Monde, Ligue des Droits Humains, Forum Bruxellois</li>
+                        <li><strong>Médias alternatifs</strong> — Alter Échos, Médor, Ensemble!, Le Guide Social</li>
+                        <li><strong>Comptes militants gauche</strong> — PTB, Ecolo, collectifs locaux</li>
+                        <li><strong>Journalistes critiques</strong> — Pigistes, correspondants sociaux</li>
+                        <li><strong>Universitaires</strong> — Sociologues, économistes critiques (DULBEA, UCLouvain)</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>🌊 L'effet cascade</h2>
+                <p>La viralité n'est pas linéaire — elle est exponentielle. Le secret : atteindre le <strong>tipping point</strong> où la propagation devient autonome.</p>
+                
+                <div class="cascade">
+                    <div class="step">VOUS (100 followers)</div>
+                    <span class="arrow">→</span>
+                    <div class="step">5 RELAIS (10k chacun)</div>
+                    <span class="arrow">→</span>
+                    <div class="step">LEURS RÉSEAUX (50k+)</div>
+                    <span class="arrow">→</span>
+                    <div class="step">ALGORITHME AMPLIFIE</div>
+                    <span class="arrow">→</span>
+                    <div class="step">VIRALITÉ AUTONOME</div>
+                </div>
+                
+                <div class="section-box">
+                    <h3>Protocole de lancement</h3>
+                    <ul class="checklist">
+                        <li><strong>J-7 :</strong> Identifiez 10-20 comptes "super-diffuseurs" (10k-50k followers engagés)</li>
+                        <li><strong>J-7 à J-1 :</strong> Engagez avec eux (likes, RT, commentaires intelligents)</li>
+                        <li><strong>J-0 matin :</strong> Publiez au créneau optimal</li>
+                        <li><strong>J-0 immédiat :</strong> Taguez les relais ou DM direct avec le lien</li>
+                        <li><strong>J-0 +1h :</strong> Répondez à TOUS les commentaires (booste l'algo)</li>
+                        <li><strong>J-0 +4h :</strong> Relancez avec un angle différent (citation, visuel)</li>
+                        <li><strong>J+1 :</strong> Thread récapitulatif si ça prend</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>📊 Métriques de succès</h2>
+                <div class="section-box">
+                    <h3>Indicateurs à surveiller</h3>
+                    <ul class="checklist">
+                        <li><strong>Ratio RT/Like :</strong> &gt;0.3 = très viral (les gens partagent, pas juste likent)</li>
+                        <li><strong>Vitesse d'engagement :</strong> 50+ interactions en 1h = l'algo va pousser</li>
+                        <li><strong>Citations/QRT :</strong> Les gens ajoutent leur commentaire = conversation</li>
+                        <li><strong>Reach vs Followers :</strong> &gt;10x = sorti de votre bulle</li>
+                        <li><strong>Nouveaux followers :</strong> Conversion = contenu qui marque</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <a href="./">← Connardovirus</a> · 
+            <a href="templates.html">Templates →</a> · 
+            <a href="https://ouaisfieu.github.io/confidentiel/claude/">Toolkit</a>
+        </footer>
+    </div>
+</body>
+</html>

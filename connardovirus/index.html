@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CONNARDOVIRUS — Ingénierie de la viralité | Les 7 déclencheurs, formats, hooks, amplification</title>
+    <meta name="description" content="Manuel complet d'ingénierie virale pour le combat informationnel citoyen. Les 7 déclencheurs émotionnels, formats optimisés, anatomie du hook parfait, stratégies d'amplification. Armez vos contenus.">
+    <meta name="keywords" content="viralité, ingénierie virale, contenu viral, déclencheurs émotionnels, hook viral, format viral, amplification, psychologie du partage, combat informationnel, guerre du récit">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://ouaisfieu.github.io/confidentiel/connardovirus/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ouaisfieu.github.io/confidentiel/connardovirus/">
+    <meta property="og:title" content="CONNARDOVIRUS — Ingénierie de la viralité">
+    <meta property="og:description" content="Armez vos contenus. Les 7 déclencheurs, formats, hooks, amplification.">
+    <meta property="og:site_name" content="ouaisfi.eu">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://ouaisfieu.github.io/confidentiel/connardovirus/#website",
+        "name": "CONNARDOVIRUS — Ingénierie de la viralité",
+        "description": "Manuel complet d'ingénierie virale pour le combat informationnel citoyen",
+        "url": "https://ouaisfieu.github.io/confidentiel/connardovirus/",
+        "inLanguage": "fr-BE",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Toolkit 三种公民战法",
+            "url": "https://ouaisfieu.github.io/confidentiel/claude/"
+        },
+        "hasPart": [
+            {"@type": "WebPage", "name": "Les 7 déclencheurs", "url": "https://ouaisfieu.github.io/confidentiel/connardovirus/declencheurs.html"},
+            {"@type": "WebPage", "name": "Formats viraux", "url": "https://ouaisfieu.github.io/confidentiel/connardovirus/formats.html"},
+            {"@type": "WebPage", "name": "Anatomie du hook", "url": "https://ouaisfieu.github.io/confidentiel/connardovirus/hooks.html"},
+            {"@type": "WebPage", "name": "Amplification", "url": "https://ouaisfieu.github.io/confidentiel/connardovirus/amplification.html"},
+            {"@type": "WebPage", "name": "Templates", "url": "https://ouaisfieu.github.io/confidentiel/connardovirus/templates.html"}
+        ],
+        "publisher": {
+            "@type": "Organization",
+            "name": "ouaisfi.eu",
+            "sameAs": ["https://ouaisfieu.github.io/alertes-sociales/", "https://yannkeep.github.io/alertes-sociales/"]
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "@id": "https://ouaisfieu.github.io/confidentiel/connardovirus/#course",
+        "name": "CONNARDOVIRUS — Formation à l'ingénierie virale",
+        "description": "Manuel opérationnel pour créer du contenu viral au service du combat citoyen",
+        "provider": {"@type": "Organization", "name": "ouaisfi.eu"},
+        "educationalLevel": "Tout public",
+        "teaches": [
+            "Identifier les 7 déclencheurs émotionnels de la viralité",
+            "Choisir le format optimal selon la plateforme",
+            "Construire un hook irrésistible",
+            "Planifier l'amplification d'un contenu",
+            "Mesurer et optimiser la propagation"
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Manifeste", "item": "https://ouaisfieu.github.io/confidentiel/"},
+            {"@type": "ListItem", "position": 2, "name": "Toolkit", "item": "https://ouaisfieu.github.io/confidentiel/claude/"},
+            {"@type": "ListItem", "position": 3, "name": "Connardovirus", "item": "https://ouaisfieu.github.io/confidentiel/connardovirus/"}
+        ]
+    }
+    </script>
+    
+    <style>
+        :root { --bg:#0a0a0a; --surface:#111; --border:#2a2a2a; --text:#e0e0e0; --muted:#888; --virus:#00ff41; --red:#dc2626; --yellow:#eab308; }
+        * { box-sizing:border-box; margin:0; padding:0; }
+        body { font-family:system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+        .container { max-width:1000px; margin:0 auto; padding:2rem 1.5rem; }
+        
+        header { text-align:center; padding:3rem 0; border-bottom:1px solid var(--border); margin-bottom:2rem; position:relative; overflow:hidden; }
+        header::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,65,0.03) 2px,rgba(0,255,65,0.03) 4px); pointer-events:none; }
+        .virus-badge { display:inline-block; font-family:monospace; font-size:0.75rem; letter-spacing:0.2em; background:var(--virus); color:#000; padding:0.5rem 1.5rem; margin-bottom:1.5rem; animation:glitch 3s infinite; }
+        @keyframes glitch { 0%,90%,100%{transform:translateX(0)} 92%{transform:translateX(-5px)} 94%{transform:translateX(5px)} 96%{transform:translateX(-3px)} 98%{transform:translateX(3px)} }
+        h1 { font-size:clamp(2rem,6vw,3.5rem); font-family:monospace; color:var(--virus); text-shadow:0 0 20px rgba(0,255,65,0.5); margin-bottom:0.5rem; }
+        h1 span { color:var(--text); }
+        .tagline { font-size:1.25rem; color:var(--muted); margin-bottom:2rem; }
+        .warning { background:rgba(234,179,8,0.1); border:1px solid var(--yellow); padding:1rem; font-size:0.875rem; max-width:600px; margin:0 auto; }
+        .warning strong { color:var(--yellow); }
+        
+        h2 { font-size:1.25rem; margin:2.5rem 0 1.5rem; display:flex; align-items:center; gap:0.75rem; }
+        h2 .num { font-family:monospace; color:var(--virus); }
+        
+        .intro { font-size:1.0625rem; max-width:700px; margin:0 auto 2rem; text-align:center; }
+        
+        .nav-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.25rem; margin-bottom:2rem; }
+        .nav-card { background:var(--surface); border:1px solid var(--border); padding:1.5rem; text-decoration:none; color:var(--text); transition:all 0.3s; position:relative; overflow:hidden; }
+        .nav-card:hover { border-color:var(--virus); box-shadow:0 0 30px rgba(0,255,65,0.2); transform:translateY(-3px); }
+        .nav-card::before { content:''; position:absolute; top:0; left:0; width:100%; height:4px; background:var(--virus); transform:scaleX(0); transform-origin:left; transition:transform 0.3s; }
+        .nav-card:hover::before { transform:scaleX(1); }
+        .nav-card .icon { font-size:2rem; margin-bottom:0.75rem; }
+        .nav-card .num { font-family:monospace; font-size:0.6875rem; color:var(--virus); letter-spacing:0.15em; }
+        .nav-card h3 { font-size:1.125rem; margin:0.5rem 0 0.25rem; }
+        .nav-card p { font-size:0.8125rem; color:var(--muted); margin:0; }
+        
+        .formula-box { background:linear-gradient(135deg,rgba(0,255,65,0.1),var(--surface)); border:1px solid var(--virus); padding:2rem; margin:2rem 0; text-align:center; }
+        .formula-box h3 { font-size:1rem; margin-bottom:1rem; color:var(--virus); }
+        .formula { font-family:monospace; font-size:1.5rem; letter-spacing:0.1em; margin-bottom:1rem; }
+        .formula span { color:var(--virus); }
+        .formula-desc { font-size:0.875rem; color:var(--muted); }
+        
+        .seven-i { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:0.75rem; margin:1.5rem 0; }
+        .i-item { background:var(--surface); border:1px solid var(--border); padding:1rem; text-align:center; transition:all 0.2s; }
+        .i-item:hover { border-color:var(--virus); }
+        .i-item .letter { font-family:monospace; font-size:2rem; color:var(--virus); }
+        .i-item .name { font-size:0.75rem; color:var(--muted); margin-top:0.25rem; }
+        
+        .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1rem; margin:1.5rem 0; }
+        .stat { background:var(--surface); border:1px solid var(--border); padding:1rem; text-align:center; }
+        .stat-value { font-size:1.75rem; font-weight:700; color:var(--virus); font-family:monospace; }
+        .stat-label { font-size:0.75rem; color:var(--muted); margin-top:0.25rem; }
+        
+        .downloads { display:flex; gap:1rem; flex-wrap:wrap; margin:1.5rem 0; }
+        .download { background:var(--surface); border:1px solid var(--border); padding:0.75rem 1.25rem; text-decoration:none; color:var(--text); font-size:0.875rem; transition:all 0.2s; }
+        .download:hover { border-color:var(--virus); background:rgba(0,255,65,0.1); }
+        
+        footer { margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border); text-align:center; font-size:0.8125rem; color:var(--muted); }
+        footer a { color:var(--virus); text-decoration:none; }
+        .footer-links { margin-top:1rem; display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="virus-badge">⚠ WARFARE MODULE ⚠</div>
+            <h1>CONNARDO<span>VIRUS</span></h1>
+            <p class="tagline">Ingénierie de la viralité — Armez vos contenus</p>
+            <div class="warning">
+                <strong>AVERTISSEMENT :</strong> Ces techniques sont des armes. Utilisez-les pour défendre les précaires, pas pour manipuler. Le pouvoir viral implique une responsabilité éthique.
+            </div>
+        </header>
+        
+        <main>
+            <p class="intro">La viralité n'est pas un accident. C'est une <strong>ingénierie</strong>. Les dominants l'utilisent pour stigmatiser. Ce manuel vous apprend à retourner leurs armes contre eux.</p>
+            
+            <div class="formula-box">
+                <h3>LA FORMULE DE LA VIRALITÉ</h3>
+                <div class="formula"><span>V</span> = (<span>E</span> × <span>I</span> × <span>F</span>) / <span>R</span></div>
+                <div class="formula-desc">
+                    <strong>V</strong>iralité = (<strong>É</strong>motion × <strong>I</strong>dentité × <strong>F</strong>ormat) / <strong>R</strong>ésistance cognitive
+                </div>
+            </div>
+            
+            <section>
+                <h2><span class="num">00</span> Les 7 I de la viralité</h2>
+                <div class="seven-i">
+                    <div class="i-item"><div class="letter">I₁</div><div class="name">INDIGNATION</div></div>
+                    <div class="i-item"><div class="letter">I₂</div><div class="name">IDENTITÉ</div></div>
+                    <div class="i-item"><div class="letter">I₃</div><div class="name">INSIDER</div></div>
+                    <div class="i-item"><div class="letter">I₄</div><div class="name">INATTENDU</div></div>
+                    <div class="i-item"><div class="letter">I₅</div><div class="name">IMMÉDIAT</div></div>
+                    <div class="i-item"><div class="letter">I₆</div><div class="name">INJUSTICE</div></div>
+                    <div class="i-item"><div class="letter">I₇</div><div class="name">IRRÉSISTIBLE</div></div>
+                </div>
+            </section>
+            
+            <section>
+                <h2><span class="num">01</span> Navigation</h2>
+                <div class="nav-grid">
+                    <a href="declencheurs.html" class="nav-card">
+                        <div class="icon">🧠</div>
+                        <span class="num">MODULE 01</span>
+                        <h3>Les 7 déclencheurs</h3>
+                        <p>Psychologie du partage. Les leviers émotionnels qui forcent la propagation.</p>
+                    </a>
+                    
+                    <a href="formats.html" class="nav-card">
+                        <div class="icon">📐</div>
+                        <span class="num">MODULE 02</span>
+                        <h3>Formats viraux</h3>
+                        <p>Thread, carrousel, vidéo courte, meme, infographie. Architecture de la contagion.</p>
+                    </a>
+                    
+                    <a href="hooks.html" class="nav-card">
+                        <div class="icon">🪝</div>
+                        <span class="num">MODULE 03</span>
+                        <h3>Anatomie du hook</h3>
+                        <p>Les 3 premières secondes. Pattern interrupt. Curiosité gap. Formules qui capturent.</p>
+                    </a>
+                    
+                    <a href="amplification.html" class="nav-card">
+                        <div class="icon">📡</div>
+                        <span class="num">MODULE 04</span>
+                        <h3>Amplification</h3>
+                        <p>Timing, hashtags, communautés, cascade. Stratégies de propagation contrôlée.</p>
+                    </a>
+                    
+                    <a href="templates.html" class="nav-card">
+                        <div class="icon">📋</div>
+                        <span class="num">MODULE 05</span>
+                        <h3>Templates</h3>
+                        <p>Modèles prêts à l'emploi. Thread, carrousel, vidéo script. Copiez, adaptez, lancez.</p>
+                    </a>
+                </div>
+            </section>
+            
+            <section>
+                <h2><span class="num">02</span> Données clés</h2>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-value">+34%</div>
+                        <div class="stat-label">Partages si indignation</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">3 sec</div>
+                        <div class="stat-label">Seuil d'attention</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">×287%</div>
+                        <div class="stat-label">Engagement thread vs tweet</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">7-12</div>
+                        <div class="stat-label">Tweets optimaux par thread</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">+38%</div>
+                        <div class="stat-label">Engagement si visage</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">Mardi</div>
+                        <div class="stat-label">Meilleur jour Twitter</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2><span class="num">03</span> Datasets</h2>
+                <div class="downloads">
+                    <a href="data/triggers.json" class="download">📊 triggers.json — 7 déclencheurs</a>
+                    <a href="data/formats.json" class="download">📊 formats.json — 8 formats</a>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>CONNARDOVIRUS — INGÉNIERIE DE LA VIRALITÉ — 三种公民战法</p>
+            <div class="footer-links">
+                <a href="https://ouaisfieu.github.io/confidentiel/claude/">← Toolkit</a>
+                <a href="https://ouaisfieu.github.io/confidentiel/scandale/">Dossier Scandale</a>
+                <a href="https://ouaisfieu.github.io/confidentiel/">Manifeste</a>
+                <a href="https://ouaisfi.eu/">ouaisfi.eu</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

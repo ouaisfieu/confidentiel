@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Les 7 déclencheurs de viralité — Psychologie du partage | CONNARDOVIRUS</title>
+    <meta name="description" content="Les 7 leviers émotionnels qui forcent le partage : Indignation (+34%), Identité, Insider, Inattendu, Immédiat, Injustice, Irrésistible. Framework complet avec formules et exemples.">
+    <meta name="keywords" content="déclencheurs viralité, psychologie partage, indignation virale, émotion partage, contenu viral, STEPPS Berger, triggers émotionnels, ingénierie virale">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://ouaisfieu.github.io/confidentiel/connardovirus/declencheurs.html">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Les 7 déclencheurs de viralité",
+        "description": "Framework des leviers psychologiques qui déclenchent le partage viral",
+        "isPartOf": {"@type": "WebSite", "url": "https://ouaisfieu.github.io/confidentiel/connardovirus/"}
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Quelle émotion génère le plus de partages ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "L'indignation (colère morale) génère 34% plus de partages que la joie selon les études de Jonah Berger. Les émotions à haute activation (colère, anxiété, excitation) sont plus virales que les émotions à basse activation (tristesse, contentement). La formule optimale combine : injustice visible + victime identifiable + coupable nommé."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Qu'est-ce que le 'curiosity gap' ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Le 'curiosity gap' (fossé de curiosité) est l'écart entre ce que vous savez et ce que vous voulez savoir. Un bon hook crée ce fossé : il donne assez d'information pour intriguer, mais pas assez pour satisfaire. Le cerveau déteste les questions sans réponse — il clique pour combler le gap. Exemple : 'Ce que les médias ne vous disent pas sur...' ouvre un gap."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment le contenu viral renforce-t-il l'identité ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "On partage ce qui dit qui on est. Partager un contenu est un acte de signalement social : cela indique à notre réseau nos valeurs, notre groupe d'appartenance, notre intelligence. Un contenu viral permet de dire 'je suis quelqu'un qui défend les précaires' ou 'je suis informé avant les autres'. C'est pourquoi le contenu qui fait bien paraître le partageur est plus viral."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Pourquoi l'urgence augmente-t-elle le partage ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "L'urgence (déclencheur 'Immédiat') exploite deux biais : la peur de la perte (FOMO) et la réduction du temps de réflexion. Un compte à rebours, une date limite, une information 'qui va être supprimée' forcent l'action immédiate. Le cerveau n'a pas le temps d'analyser rationnellement — il agit. L'urgence transforme l'intention en action."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Qu'est-ce que l'effet 'insider' en viralité ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "L'effet 'insider' exploite le désir de capital social. Savoir quelque chose avant les autres, avoir accès à une information exclusive, donne un sentiment de supériorité. Partager cette info permet de montrer qu'on est 'dans la boucle'. Les formules 'Ce que personne ne vous dit', 'Révélation exclusive', 'Voici ce qu'ils cachent' activent ce levier."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <style>
+        :root { --bg:#0a0a0a; --surface:#111; --border:#2a2a2a; --text:#e0e0e0; --muted:#888; --virus:#00ff41; --red:#dc2626; }
+        * { box-sizing:border-box; margin:0; padding:0; }
+        body { font-family:system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+        .container { max-width:900px; margin:0 auto; padding:2rem 1.5rem; }
+        header { border-bottom:1px solid var(--border); padding-bottom:1rem; margin-bottom:2rem; }
+        nav { font-size:0.8125rem; margin-bottom:1rem; }
+        nav a { color:var(--muted); text-decoration:none; margin-right:1rem; }
+        nav a:hover { color:var(--virus); }
+        .badge { display:inline-block; font-family:monospace; font-size:0.75rem; background:var(--virus); color:#000; padding:0.25rem 0.5rem; margin-bottom:1rem; }
+        h1 { font-size:1.75rem; margin-bottom:0.5rem; }
+        .lead { color:var(--muted); }
+        
+        h2 { font-size:1.25rem; margin:2.5rem 0 1rem; }
+        
+        .trigger { background:var(--surface); border:1px solid var(--border); margin:1.5rem 0; position:relative; overflow:hidden; }
+        .trigger::before { content:''; position:absolute; top:0; left:0; width:6px; height:100%; background:var(--virus); }
+        .trigger-header { padding:1.25rem 1.5rem; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:1rem; }
+        .trigger-num { font-family:monospace; font-size:2rem; color:var(--virus); font-weight:700; }
+        .trigger-name { font-size:1.25rem; font-weight:600; }
+        .trigger-stat { margin-left:auto; font-family:monospace; font-size:0.875rem; color:var(--virus); background:rgba(0,255,65,0.1); padding:0.25rem 0.75rem; }
+        .trigger-body { padding:1.5rem; }
+        .trigger-desc { margin-bottom:1rem; }
+        .trigger-formula { background:var(--bg); border:1px solid var(--border); padding:1rem; margin:1rem 0; font-family:monospace; font-size:0.9375rem; }
+        .trigger-formula strong { color:var(--virus); }
+        .trigger-example { background:rgba(0,255,65,0.05); border-left:3px solid var(--virus); padding:1rem; margin-top:1rem; }
+        .trigger-example .label { font-size:0.6875rem; color:var(--muted); letter-spacing:0.1em; margin-bottom:0.5rem; }
+        .trigger-example p { font-style:italic; margin:0; }
+        
+        .matrix { overflow-x:auto; margin:1.5rem 0; }
+        .matrix table { width:100%; border-collapse:collapse; font-size:0.875rem; }
+        .matrix th, .matrix td { padding:0.75rem; border:1px solid var(--border); text-align:left; }
+        .matrix th { background:var(--surface); color:var(--virus); font-family:monospace; }
+        .matrix td:first-child { font-weight:600; }
+        
+        footer { margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border); text-align:center; font-size:0.8125rem; color:var(--muted); }
+        footer a { color:var(--virus); text-decoration:none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="./">← Connardovirus</a>
+                <a href="formats.html">Formats</a>
+                <a href="hooks.html">Hooks</a>
+                <a href="amplification.html">Amplification</a>
+            </nav>
+            <span class="badge">MODULE 01</span>
+            <h1>Les 7 déclencheurs</h1>
+            <p class="lead">Psychologie du partage — Les leviers émotionnels qui forcent la propagation</p>
+        </header>
+        
+        <main>
+            <p>La viralité n'est pas aléatoire. Elle obéit à des <strong>lois psychologiques</strong>. Ces 7 déclencheurs sont les boutons sur lesquels appuyer pour transformer un contenu ordinaire en virus informationnel.</p>
+            
+            <div class="trigger">
+                <div class="trigger-header">
+                    <span class="trigger-num">I₁</span>
+                    <span class="trigger-name">INDIGNATION</span>
+                    <span class="trigger-stat">+34% partages</span>
+                </div>
+                <div class="trigger-body">
+                    <p class="trigger-desc">L'émotion la plus virale. La colère morale génère 34% plus de partages que la joie (Berger & Milkman, 2012). Le cerveau en colère ne réfléchit plus — il réagit, il partage.</p>
+                    <div class="trigger-formula">
+                        <strong>FORMULE :</strong> [Injustice visible] + [Victime identifiable] + [Coupable nommé]
+                    </div>
+                    <div class="trigger-example">
+                        <div class="label">EXEMPLE</div>
+                        <p>"€250M de fraude sociale détectée vs €30 Mds de fraude fiscale estimée. Qui traque-t-on ? Les chômeurs."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trigger">
+                <div class="trigger-header">
+                    <span class="trigger-num">I₂</span>
+                    <span class="trigger-name">IDENTITÉ</span>
+                    <span class="trigger-stat">Signal social</span>
+                </div>
+                <div class="trigger-body">
+                    <p class="trigger-desc">On partage ce qui dit qui on est. Partager = signalement social. Le contenu qui fait bien paraître le partageur est plus viral car il renforce son image aux yeux de son réseau.</p>
+                    <div class="trigger-formula">
+                        <strong>FORMULE :</strong> [Valeur tribale] + [Signal de groupe] + [Nous vs Eux]
+                    </div>
+                    <div class="trigger-example">
+                        <div class="label">EXEMPLE</div>
+                        <p>"Partager ceci = dire 'je défends les précaires contre la propagande'."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trigger">
+                <div class="trigger-header">
+                    <span class="trigger-num">I₃</span>
+                    <span class="trigger-name">INSIDER</span>
+                    <span class="trigger-stat">Capital social</span>
+                </div>
+                <div class="trigger-body">
+                    <p class="trigger-desc">Savoir avant les autres = pouvoir social. L'information exclusive donne un sentiment de supériorité. On partage pour montrer qu'on est "dans la boucle".</p>
+                    <div class="trigger-formula">
+                        <strong>FORMULE :</strong> [Révélation] + [Source cachée] + [Tu seras le premier à savoir]
+                    </div>
+                    <div class="trigger-example">
+                        <div class="label">EXEMPLE</div>
+                        <p>"Ce que les médias ne vous diront pas sur Deborsu : sa nièce Charlotte est échevine MR."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trigger">
+                <div class="trigger-header">
+                    <span class="trigger-num">I₄</span>
+                    <span class="trigger-name">INATTENDU</span>
+                    <span class="trigger-stat">Rupture cognitive</span>
+                </div>
+                <div class="trigger-body">
+                    <p class="trigger-desc">La surprise crée le partage. Briser un schéma mental = mémorabilité maximale. Le cerveau retient ce qui le surprend et veut partager cette surprise.</p>
+                    <div class="trigger-formula">
+                        <strong>FORMULE :</strong> [Attente créée] + [Renversement] + [Révélation]
+                    </div>
+                    <div class="trigger-example">
+                        <div class="label">EXEMPLE</div>
+                        <p>"Le vrai fraudeur n'est pas celui que vous croyez. Le ratio est de 1 pour 120."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trigger">
+                <div class="trigger-header">
+                    <span class="trigger-num">I₅</span>
+                    <span class="trigger-name">IMMÉDIAT</span>
+                    <span class="trigger-stat">FOMO</span>
+                </div>
+                <div class="trigger-body">
+                    <p class="trigger-desc">Urgence = action. Le compte à rebours force la décision. La peur de rater quelque chose (FOMO) court-circuite l'analyse rationnelle.</p>
+                    <div class="trigger-formula">
+                        <strong>FORMULE :</strong> [Deadline] + [Perte potentielle] + [Action simple]
+                    </div>
+                    <div class="trigger-example">
+                        <div class="label">EXEMPLE</div>
+                        <p>"Dans 48h, cette page sera supprimée. Partagez maintenant ou l'info disparaît."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trigger">
+                <div class="trigger-header">
+                    <span class="trigger-num">I₆</span>
+                    <span class="trigger-name">INJUSTICE</span>
+                    <span class="trigger-stat">Équité violée</span>
+                </div>
+                <div class="trigger-body">
+                    <p class="trigger-desc">Le sentiment d'injustice est universel et mobilisateur. La disproportion choque. Le "deux poids deux mesures" révolte. C'est le carburant des mouvements sociaux.</p>
+                    <div class="trigger-formula">
+                        <strong>FORMULE :</strong> [Disproportion chiffrée] + [Deux poids deux mesures] + [Pourquoi eux et pas nous ?]
+                    </div>
+                    <div class="trigger-example">
+                        <div class="label">EXEMPLE</div>
+                        <p>"+45 inspecteurs pour traquer la fraude sociale, ÷2 contrôleurs fiscaux. Cherchez l'erreur."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trigger">
+                <div class="trigger-header">
+                    <span class="trigger-num">I₇</span>
+                    <span class="trigger-name">IRRÉSISTIBLE</span>
+                    <span class="trigger-stat">Pattern interrupt</span>
+                </div>
+                <div class="trigger-body">
+                    <p class="trigger-desc">Le format compte autant que le fond. Visuel accrocheur + formule choc = impossible à ignorer. Le scroll s'arrête. L'œil est capturé.</p>
+                    <div class="trigger-formula">
+                        <strong>FORMULE :</strong> [Hook visuel] + [Chiffre choc] + [Question ouverte]
+                    </div>
+                    <div class="trigger-example">
+                        <div class="label">EXEMPLE</div>
+                        <p>"RATIO × 120" en gros, rouge sur noir. Impossible de ne pas regarder.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Matrice d'activation</h2>
+            <div class="matrix">
+                <table>
+                    <tr>
+                        <th>Déclencheur</th>
+                        <th>Émotion primaire</th>
+                        <th>Mécanisme</th>
+                        <th>Mot-clé</th>
+                    </tr>
+                    <tr>
+                        <td>I₁ Indignation</td>
+                        <td>Colère</td>
+                        <td>Haute activation</td>
+                        <td>SCANDALE</td>
+                    </tr>
+                    <tr>
+                        <td>I₂ Identité</td>
+                        <td>Fierté</td>
+                        <td>Signalement social</td>
+                        <td>NOUS</td>
+                    </tr>
+                    <tr>
+                        <td>I₃ Insider</td>
+                        <td>Supériorité</td>
+                        <td>Capital social</td>
+                        <td>SECRET</td>
+                    </tr>
+                    <tr>
+                        <td>I₄ Inattendu</td>
+                        <td>Surprise</td>
+                        <td>Rupture cognitive</td>
+                        <td>CHOC</td>
+                    </tr>
+                    <tr>
+                        <td>I₅ Immédiat</td>
+                        <td>Anxiété</td>
+                        <td>FOMO</td>
+                        <td>MAINTENANT</td>
+                    </tr>
+                    <tr>
+                        <td>I₆ Injustice</td>
+                        <td>Révolte</td>
+                        <td>Équité violée</td>
+                        <td>POURQUOI</td>
+                    </tr>
+                    <tr>
+                        <td>I₇ Irrésistible</td>
+                        <td>Curiosité</td>
+                        <td>Pattern interrupt</td>
+                        <td>REGARDEZ</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        
+        <footer>
+            <a href="./">← Connardovirus</a> · 
+            <a href="formats.html">Formats →</a> · 
+            <a href="https://ouaisfieu.github.io/confidentiel/claude/">Toolkit</a>
+        </footer>
+    </div>
+</body>
+</html>
