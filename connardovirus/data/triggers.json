@@ -1,0 +1,136 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://ouaisfieu.github.io/confidentiel/connardovirus/data/triggers.json",
+  "name": "Les 7 déclencheurs de viralité — Ingénierie émotionnelle",
+  "description": "Framework des 7 leviers psychologiques qui déclenchent le partage viral : Indignation, Identité, Insider, Inattendu, Immédiat, Injustice, Irrésistible",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "dateModified": "2026-02-09",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "CONNARDOVIRUS — Ingénierie de la viralité",
+    "url": "https://ouaisfieu.github.io/confidentiel/connardovirus/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Les 7 I de la viralité",
+    "numberOfItems": 7,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Thing",
+          "name": "INDIGNATION",
+          "identifier": "I1",
+          "description": "L'émotion la plus virale. La colère génère 34% plus de partages que la joie. Formule : [Injustice visible] + [Victime identifiable] + [Coupable nommé]",
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Taux de partage", "value": "+34%"},
+            {"@type": "PropertyValue", "name": "Émotion primaire", "value": "Colère"},
+            {"@type": "PropertyValue", "name": "Exemple", "value": "€250M de fraude sociale vs €30 Mds de fraude fiscale. Qui traque-t-on ?"}
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Thing",
+          "name": "IDENTITÉ",
+          "identifier": "I2",
+          "description": "On partage ce qui dit qui on est. Le contenu viral confirme l'identité sociale du partageur. Formule : [Valeur tribale] + [Signal de groupe] + [Nous vs Eux]",
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Mécanisme", "value": "Signalement social"},
+            {"@type": "PropertyValue", "name": "Émotion primaire", "value": "Fierté/Appartenance"},
+            {"@type": "PropertyValue", "name": "Exemple", "value": "Partager ceci = dire 'je défends les précaires'"}
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Thing",
+          "name": "INSIDER",
+          "identifier": "I3",
+          "description": "Information exclusive qui donne un sentiment de supériorité. Savoir avant les autres = capital social. Formule : [Révélation] + [Source cachée] + [Tu seras le premier à savoir]",
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Mécanisme", "value": "Capital social"},
+            {"@type": "PropertyValue", "name": "Émotion primaire", "value": "Supériorité"},
+            {"@type": "PropertyValue", "name": "Exemple", "value": "Ce que les médias ne vous diront pas sur Deborsu..."}
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Thing",
+          "name": "INATTENDU",
+          "identifier": "I4",
+          "description": "La surprise crée le partage. Briser un schéma mental = mémorabilité maximale. Formule : [Attente] + [Renversement] + [Révélation]",
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Mécanisme", "value": "Rupture cognitive"},
+            {"@type": "PropertyValue", "name": "Émotion primaire", "value": "Surprise"},
+            {"@type": "PropertyValue", "name": "Exemple", "value": "Le vrai fraudeur n'est pas celui que vous croyez"}
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Thing",
+          "name": "IMMÉDIAT",
+          "identifier": "I5",
+          "description": "Urgence = action. Le compte à rebours force la décision. Formule : [Deadline] + [Perte potentielle] + [Action simple]",
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Mécanisme", "value": "FOMO / Urgence"},
+            {"@type": "PropertyValue", "name": "Émotion primaire", "value": "Anxiété"},
+            {"@type": "PropertyValue", "name": "Exemple", "value": "Dans 48h, cette page disparaît. Partagez maintenant."}
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Thing",
+          "name": "INJUSTICE",
+          "identifier": "I6",
+          "description": "Le sentiment d'injustice est universel et mobilisateur. Formule : [Disproportion] + [Deux poids deux mesures] + [Pourquoi eux et pas nous ?]",
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Mécanisme", "value": "Équité violée"},
+            {"@type": "PropertyValue", "name": "Émotion primaire", "value": "Révolte"},
+            {"@type": "PropertyValue", "name": "Exemple", "value": "+45 inspecteurs fraude sociale, ÷2 contrôleurs fiscaux"}
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "Thing",
+          "name": "IRRÉSISTIBLE",
+          "identifier": "I7",
+          "description": "Le format compte autant que le fond. Visuel accrocheur + formule choc = impossible à ignorer. Formule : [Hook visuel] + [Chiffre choc] + [Question ouverte]",
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Mécanisme", "value": "Pattern interrupt"},
+            {"@type": "PropertyValue", "name": "Émotion primaire", "value": "Curiosité"},
+            {"@type": "PropertyValue", "name": "Exemple", "value": "RATIO × 120 — Qui sont les vrais fraudeurs ?"}
+          ]
+        }
+      }
+    ]
+  },
+  "keywords": [
+    "viralité",
+    "déclencheurs émotionnels",
+    "ingénierie sociale",
+    "partage viral",
+    "psychologie du partage",
+    "7 I viralité",
+    "indignation virale",
+    "contenu viral"
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://ouaisfieu.github.io/confidentiel/connardovirus/data/formats.json",
+  "name": "Formats viraux — Architectures de contagion",
+  "description": "Catalogue des formats de contenu optimisés pour la viralité : thread, carrousel, vidéo courte, meme, infographie, témoignage, comparaison",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "dateModified": "2026-02-09",
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Formats viraux par plateforme",
+    "numberOfItems": 8,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "THREAD TWITTER/X",
+          "description": "Narration séquentielle optimisée pour l'engagement. 5-15 tweets. Hook → Développement → Climax → CTA",
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Plateforme", "value": "Twitter/X"},
+            {"@type": "PropertyValue", "name": "Longueur optimale", "value": "7-12 tweets"},
+            {"@type": "PropertyValue", "name": "Taux engagement", "value": "+287% vs tweet simple"},
+            {"@type": "PropertyValue", "name": "Structure", "value": "Hook choc → Contexte → Preuves → Révélation → Conclusion → CTA"}
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "CARROUSEL INSTAGRAM/LINKEDIN",
+          "description": "Slides visuelles avec progression narrative. 5-10 slides. Chaque slide = 1 idée.",
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Plateforme", "value": "Instagram, LinkedIn"},
+            {"@type": "PropertyValue", "name": "Longueur optimale", "value": "7-10 slides"},
+            {"@type": "PropertyValue", "name": "Taux engagement", "value": "+3.1x vs image simple"},
+            {"@type": "PropertyValue", "name": "Structure", "value": "Couverture choc → Problème → Données → Solution → CTA save/share"}
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "VIDÉO COURTE (REELS/TIKTOK)",
+          "description": "Format vertical <60s. Hook dans les 3 premières secondes obligatoire.",
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Plateforme", "value": "TikTok, Instagram Reels, YouTube Shorts"},
+            {"@type": "PropertyValue", "name": "Longueur optimale", "value": "15-45 secondes"},
+            {"@type": "PropertyValue", "name": "Rétention critique", "value": "3 premières secondes"},
+            {"@type": "PropertyValue", "name": "Structure", "value": "Hook visuel → Pattern interrupt → Révélation → Loop ou CTA"}
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "MEME/VISUEL CHOC",
+          "description": "Image + texte court. Compréhensible en <2 secondes. Partageable sans contexte.",
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Plateforme", "value": "Toutes"},
+            {"@type": "PropertyValue", "name": "Temps de lecture", "value": "<2 secondes"},
+            {"@type": "PropertyValue", "name": "Viralité", "value": "Maximum si contexte universel"},
+            {"@type": "PropertyValue", "name": "Structure", "value": "Setup (attente) → Punchline (rupture)"}
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "INFOGRAPHIE COMPARATIVE",
+          "description": "Données visualisées avec contraste fort. Deux colonnes ou barres comparatives.",
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Plateforme", "value": "LinkedIn, Twitter, Facebook"},
+            {"@type": "PropertyValue", "name": "Format", "value": "Portrait 1080×1350 ou carré"},
+            {"@type": "PropertyValue", "name": "Élément clé", "value": "Contraste visuel maximal"},
+            {"@type": "PropertyValue", "name": "Structure", "value": "Titre choc → Comparaison visuelle → Source → Logo"}
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "TÉMOIGNAGE HUMANISÉ",
+          "description": "Citation + visage + contexte. L'humain crée l'empathie et la crédibilité.",
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Plateforme", "value": "Toutes"},
+            {"@type": "PropertyValue", "name": "Élément clé", "value": "Visage visible = +38% engagement"},
+            {"@type": "PropertyValue", "name": "Émotion cible", "value": "Empathie, identification"},
+            {"@type": "PropertyValue", "name": "Structure", "value": "Citation percutante → Nom/contexte → Visuel humain"}
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "LISTE NUMÉROTÉE",
+          "description": "Format scannable. Le cerveau aime les nombres. '7 raisons', '5 preuves', '3 faits'.",
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Plateforme", "value": "Toutes"},
+            {"@type": "PropertyValue", "name": "Nombres optimaux", "value": "3, 5, 7, 10"},
+            {"@type": "PropertyValue", "name": "Taux de clic", "value": "+36% vs titres sans nombre"},
+            {"@type": "PropertyValue", "name": "Structure", "value": "Nombre impair + promesse + curiosité gap"}
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "SCREENSHOT PREUVE",
+          "description": "Capture d'écran = preuve visuelle. Document, tweet, article. Authentifie l'info.",
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Plateforme", "value": "Twitter, Facebook, Telegram"},
+            {"@type": "PropertyValue", "name": "Élément clé", "value": "Horodatage visible"},
+            {"@type": "PropertyValue", "name": "Crédibilité", "value": "Élevée si source identifiable"},
+            {"@type": "PropertyValue", "name": "Structure", "value": "Screenshot + surlignage zone clé + contexte court"}
+          ]
+        }
+      }
+    ]
+  }
+}
