@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ouaisfieu.github.io/alertes-sociales/sitemap.xml
+
+# Site lié (données ouvertes)
+# https://yannkeep.github.io/alertes-sociales/
