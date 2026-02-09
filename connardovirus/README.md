@@ -1,3 +1,106 @@
+Je crée le dossier lead-dexing approfondi Deborsu avec structure complète.## DOSSIER LEAD-DEXING DEBORSU COMPLET
+
+**URL déploiement :** `https://ouaisfieu.github.io/confidentiel/scandale/deborsu/`
+
+---
+
+### Structure : 10 fichiers
+
+```
+deborsu/
+├── index.html              (3 schemas)
+├── parcours.html           (2 schemas, 3 FAQ)
+├── reseaux.html            (2 schemas, 4 FAQ)
+├── oeuvres.html            (2 schemas)
+├── controverse.html        (2 schemas, 4 FAQ)
+├── reactions.html          (2 schemas, 3 FAQ)
+├── data/
+│   ├── timeline.json       (18 événements)
+│   └── network.json        (cartographie complète)
+├── sitemap.xml
+└── robots.txt
+```
+
+---
+
+### Contenu par page
+
+| Page | Contenu |
+|------|---------|
+| **index.html** | Hub avec profile-card, chiffres clés, navigation 5 sections |
+| **parcours.html** | Timeline RTBF 1988-2012, RTL 2015+, événements clés |
+| **reseaux.html** | Charlotte Deborsu MR, RTL/Bertelsmann, De Standaard, soutiens/critiques |
+| **oeuvres.html** | Livres, "Je vous dérange", chronique De Standaard |
+| **controverse.html** | Profils Jacqueline/Laetitia, Gaëlle Denys, plaintes CSA, défense |
+| **reactions.html** | Bouchez, Magnette, N-VA, Ecolo, PTB, motion Verviers, 5 ministres |
+
+---
+
+### Datasets JSON-LD
+
+**timeline.json — 18 événements :**
+- 1965 : Naissance
+- 1988 : Entrée RTBF
+- 2006 : Bye Bye Belgium
+- 2007 : Piège Leterme/Brabançonne
+- 2012 : Départ RTBF
+- 2015 : RTL + De Standaard
+- 2020 : "Je vous dérange"
+- 7 nov 2025 : Reportage
+- 8+ nov : Plaintes CSA
+- 24 nov : Motion Verviers
+- Déc 2025 : 5 ministres
+- 2026 : Instruction CSA
+
+**network.json — Cartographie :**
+- Famille : Charlotte Deborsu (nièce, MR Namur)
+- Employeurs : RTL Belgium, De Standaard, ex-RTBF
+- Soutiens : Bouchez, Ducarme, De Wever
+- Critiques : Magnette, Denys, Ecolo, PTB
+
+---
+
+### RÉCAP TOTAL ÉCOSYSTÈME SCANDALE
+
+```
+/confidentiel/scandale/
+├── index.html              (hub principal)
+├── deborsu.html            (résumé → pointe vers /deborsu/)
+├── chiffres.html           (€250M vs €30Mds)
+├── anatomie.html           (techniques manipulation)
+├── atelier.html            (éducation permanente)
+├── data/
+│   ├── deborsu-profile.json
+│   └── fraude-comparaison.json
+│
+└── deborsu/                ← NOUVEAU
+    ├── index.html
+    ├── parcours.html
+    ├── reseaux.html
+    ├── oeuvres.html
+    ├── controverse.html
+    ├── reactions.html
+    └── data/
+        ├── timeline.json
+        └── network.json
+```
+
+---
+
+### Statistiques GEO totales (Scandale + Deborsu)
+
+| Métrique | Total |
+|----------|-------|
+| Fichiers HTML | 11 |
+| Schemas JSON-LD | ~25 |
+| FAQPage questions | 35 |
+| Datasets JSON | 4 |
+| Événements timeline | 18 |
+| Acteurs cartographiés | 15+ |
+
+
+---
+
 > Je déploie le module de guerre virale "Connardovirus" — ingénierie complète de la contagion informationnelle.
 
 ## CONNARDOVIRUS — INGÉNIERIE DE LA VIRALITÉ
