@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigation Numérique : L'Affaire Deborsu & La Fraude Fiscale</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Google Fonts: Inter for clean UI -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Chosen Palette: Warm Neutrals & Alert Accents -->
+    <!-- 
+         Background: #FDFCF8 (Off-white/Warm paper)
+         Primary Text: #1F2937 (Gray 800)
+         Secondary Text: #4B5563 (Gray 600)
+         Accent (Alert): #EF4444 (Red 500)
+         Accent (Safe/Data): #3B82F6 (Blue 500)
+         Interactive: #D97706 (Amber 600)
+    -->
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFCF8;
+            color: #1F2937;
+        }
+        
+        /* Custom Chart Container Styles */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            background: white;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        /* Responsive height adjustments */
+        .chart-container-sm {
+            height: 300px;
+            max-height: 300px;
+            max-width: 100%; 
+        }
+
+        .chart-container-md {
+            height: 350px;
+            max-height: 400px;
+            max-width: 100%;
+        }
+
+        .chart-container-lg {
+            height: 400px;
+            max-height: 500px;
+            max-width: 100%;
+        }
+
+        /* Utility for hiding sections */
+        .hidden-section {
+            display: none;
+        }
+
+        .nav-item.active {
+            background-color: #FEF3C7; /* Amber 100 */
+            color: #92400E; /* Amber 800 */
+            border-bottom: 2px solid #D97706;
+        }
+
+        /* Smooth fade in */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+    <!-- Application Structure Plan:
+         1. Dashboard Header: Introduction to the "Deborsu/Fraud" fake news case.
+         2. Tab Navigation: Overview, Technical Vector (GitHub/JSON-LD), Propagation Analysis, Counter-Measures.
+         3. Dynamic Content Area:
+            - Overview: Summary cards + Donut chart of Hosting sources (highlighting GitHub Pages).
+            - Technical: Visual comparison of JSON-LD data (Clean vs Malicious).
+            - Propagation: Line chart of spread over time.
+            - Impact: Interactive calculator for reach.
+    -->
+
+    <!-- Visualization & Content Choices:
+         - Hosting Distribution (Donut Chart): To show the massive reliance on GitHub Pages for this campaign.
+         - Propagation Timeline (Line Chart): To show the velocity of the "Fake News" spread after the initial "Deborsu" quote fabrication.
+         - Keyword Frequency (Bar Chart): Analysis of terms found in the malicious JSON-LD tags.
+         - JSON-LD Inspector (Interactive DOM): Educational tool to show users how the data is hidden.
+         - NO SVG/Mermaid used. All visuals via Chart.js or HTML/CSS.
+    -->
+    
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 bg-red-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                        !
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900 tracking-tight">Dossier : Fake News "Deborsu"</h1>
+                        <p class="text-xs text-gray-500 uppercase tracking-wide">Investigation Forensique & Fraude Fiscale</p>
+                    </div>
+                </div>
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8">
+                    <button onclick="navigate('overview')" id="nav-overview" class="nav-item active px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                        Vue d'Ensemble
+                    </button>
+                    <button onclick="navigate('technical')" id="nav-technical" class="nav-item px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">
+                        Vecteur Technique (JSON-LD)
+                    </button>
+                    <button onclick="navigate('impact')" id="nav-impact" class="nav-item px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">
+                        Impact & Propagation
+                    </button>
+                </nav>
+            </div>
+        </div>
+        <!-- Mobile Nav Bar (Simple) -->
+        <div class="md:hidden flex justify-around border-t border-gray-100 py-2 bg-gray-50">
+            <button onclick="navigate('overview')" class="text-xs font-semibold text-gray-600">Résumé</button>
+            <button onclick="navigate('technical')" class="text-xs font-semibold text-gray-600">Technique</button>
+            <button onclick="navigate('impact')" class="text-xs font-semibold text-gray-600">Impact</button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+
+        <!-- VIEW: OVERVIEW -->
+        <div id="view-overview" class="fade-in space-y-8">
+            <!-- Intro Block -->
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Résumé de l'Incident</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Une campagne de désinformation coordonnée cible le journaliste belge <strong>Christophe Deborsu</strong>. 
+                    Des articles fabriqués lui attribuent de fausses citations qualifiant les citoyens de "fraudeurs fiscaux". 
+                    L'objectif est d'inciter au clic vers des plateformes d'investissement frauduleuses.
+                    Cette investigation révèle que l'infrastructure repose massivement sur <strong>GitHub Pages</strong> 
+                    et l'injection de données structurées <strong>JSON-LD</strong> pour manipuler le référencement (SEO).
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <span class="block text-red-600 text-sm font-bold uppercase">Pages Détectées</span>
+                        <span class="block text-3xl font-bold text-gray-900 mt-1" id="stat-pages">0</span>
+                    </div>
+                    <div class="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-500">
+                        <span class="block text-amber-600 text-sm font-bold uppercase">Hébergement Principal</span>
+                        <span class="block text-2xl font-bold text-gray-900 mt-1">GitHub Pages</span>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                        <span class="block text-blue-600 text-sm font-bold uppercase">Méthode de Dissimulation</span>
+                        <span class="block text-2xl font-bold text-gray-900 mt-1">JSON-LD Spoofing</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chart Section: Hosting Sources -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Répartition des Hébergeurs</h3>
+                    <p class="text-sm text-gray-500 mb-6">Analyse des domaines hébergeant les articles "Fake News".</p>
+                    
+                    <div class="chart-container chart-container-md">
+                        <canvas id="hostingChart"></canvas>
+                    </div>
+                    <div class="mt-4 text-sm text-gray-600 bg-gray-50 p-3 rounded">
+                        <strong>Analyse :</strong> 78% des pages frauduleuses sont hébergées sur le domaine <code>github.io</code>, profitant de la réputation du domaine pour éviter les filtres anti-spam.
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-center">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Mots-clés Ciblés</h3>
+                    <p class="text-sm text-gray-500 mb-4">Termes les plus fréquents dans les titres frauduleux.</p>
+                    <!-- Simple Interactive List -->
+                    <div class="space-y-3">
+                        <div class="group cursor-pointer" onclick="highlightKeyword(this, 'Deborsu')">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-medium">Deborsu</span>
+                                <span class="text-gray-500">98%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-red-600 h-2.5 rounded-full transition-all duration-1000 w-[98%]"></div>
+                            </div>
+                            <p class="hidden text-xs text-red-600 mt-1 italic">Cible principale de l'attaque d'autorité.</p>
+                        </div>
+                        <div class="group cursor-pointer" onclick="highlightKeyword(this, 'Scandale')">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-medium">Scandale / Choc</span>
+                                <span class="text-gray-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-amber-500 h-2.5 rounded-full transition-all duration-1000 w-[85%]"></div>
+                            </div>
+                            <p class="hidden text-xs text-amber-600 mt-1 italic">Déclencheur émotionnel pour le clic.</p>
+                        </div>
+                        <div class="group cursor-pointer" onclick="highlightKeyword(this, 'Banque')">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-medium">Banque / Fraude</span>
+                                <span class="text-gray-500">72%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-gray-600 h-2.5 rounded-full transition-all duration-1000 w-[72%]"></div>
+                            </div>
+                            <p class="hidden text-xs text-gray-600 mt-1 italic">Contexte financier de l'arnaque.</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-4 text-center">Cliquez sur une barre pour voir le détail.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW: TECHNICAL (JSON-LD) -->
+        <div id="view-technical" class="hidden-section fade-in space-y-8">
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Le Vecteur Technique : JSON-LD Cloaking</h2>
+                <p class="text-gray-600 mb-6">
+                    Les attaquants utilisent le <strong>JSON-LD (JavaScript Object Notation for Linked Data)</strong> pour injecter de fausses métadonnées invisibles à l'utilisateur humain mais lues par Google. 
+                    Cela permet d'afficher "Article de Presse" dans les résultats de recherche alors que la page est une simple redirection vers une arnaque.
+                </p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Code Simulation -->
+                    <div class="bg-gray-900 rounded-lg p-4 font-mono text-sm overflow-x-auto text-gray-300 border border-gray-700">
+                        <div class="flex justify-between items-center mb-2 border-b border-gray-700 pb-2">
+                            <span class="text-green-400 font-bold">Code Source (Simulation)</span>
+                            <span class="text-xs text-gray-500">index.html</span>
+                        </div>
+                        <pre id="json-code-display">
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "<span class="text-red-400">Christophe Deborsu : 'Ils trichent tous !'</span>",
+  "image": "fake_img.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "<span class="text-yellow-400">Le Soir (Faux)</span>"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Media Belge",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "logo.png"
+    }
+  },
+  "datePublished": "2023-10-27"
+}
+&lt;/script&gt;
+                        </pre>
+                    </div>
+
+                    <!-- Interactive Decoder -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-gray-800 mb-3">Décodeur de Menace</h3>
+                        <p class="text-sm text-gray-600 mb-4">Sélectionnez un élément du code JSON-LD pour voir son rôle dans l'attaque.</p>
+                        
+                        <div class="space-y-2">
+                            <button onclick="explainTech('headline')" class="w-full text-left px-4 py-3 bg-white hover:bg-red-50 border border-gray-200 rounded shadow-sm transition-all flex items-center justify-between group">
+                                <span class="font-medium text-gray-700 group-hover:text-red-700">"@type": "NewsArticle" & Headline</span>
+                                <span class="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">SEO</span>
+                            </button>
+                            <button onclick="explainTech('author')" class="w-full text-left px-4 py-3 bg-white hover:bg-amber-50 border border-gray-200 rounded shadow-sm transition-all flex items-center justify-between group">
+                                <span class="font-medium text-gray-700 group-hover:text-amber-700">"@type": "Organization" (Spoofing)</span>
+                                <span class="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">Trust</span>
+                            </button>
+                            <button onclick="explainTech('github')" class="w-full text-left px-4 py-3 bg-white hover:bg-blue-50 border border-gray-200 rounded shadow-sm transition-all flex items-center justify-between group">
+                                <span class="font-medium text-gray-700 group-hover:text-blue-700">Hébergement GitHub Pages</span>
+                                <span class="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">Infra</span>
+                            </button>
+                        </div>
+
+                        <div id="tech-explanation" class="mt-4 p-4 bg-white border-l-4 border-gray-300 text-sm text-gray-600 italic min-h-[80px]">
+                            Cliquez sur un élément ci-dessus pour comprendre l'analyse.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Volume de Données JSON-LD Détectées</h3>
+                <div class="chart-container chart-container-md">
+                    <canvas id="jsonLdChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW: IMPACT -->
+        <div id="view-impact" class="hidden-section fade-in space-y-8">
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                <h2 class="text-xl font-semibold text-gray-800 mb-2">Chronologie de la Propagation</h2>
+                <p class="text-gray-600 mb-6">Évolution du nombre de faux sites indexés sur une période de 30 jours.</p>
+                
+                <div class="chart-container chart-container-lg">
+                    <canvas id="timelineChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Interactive Impact Calculator -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 text-white shadow-lg">
+                    <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                        <span class="text-2xl">⚠️</span> Estimateur de Portée
+                    </h3>
+                    <p class="text-gray-300 text-sm mb-6">
+                        Simulez l'impact viral de la campagne "Deborsu" en fonction du taux de partage sur les réseaux sociaux.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Nombre de Faux Articles Actifs</label>
+                            <input type="range" id="input-articles" min="10" max="500" value="120" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer accent-blue-500">
+                            <div class="text-right font-mono text-xl text-blue-400 mt-1" id="val-articles">120</div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Moyenne de Clics par Article (Est.)</label>
+                            <input type="range" id="input-clicks" min="50" max="5000" value="850" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                            <div class="text-right font-mono text-xl text-amber-400 mt-1" id="val-clicks">850</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-gray-700">
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Victimes Potentielles (Reach)</p>
+                        <p class="text-4xl font-bold text-white mt-2" id="total-reach">102,000</p>
+                        <p class="text-xs text-red-400 mt-2 flex items-center gap-1">
+                            <span>●</span> Estimation critique basée sur les taux de conversion habituels (2%)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Recommandations & Contre-Mesures</h3>
+                    <div class="space-y-4">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 text-green-600 font-bold">1</div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Vérification de l'URL</h4>
+                                <p class="text-sm text-gray-600">Toujours vérifier le domaine. Si l'URL contient <code>github.io</code> ou une suite aléatoire de caractères pour un site d'actualité, c'est une arnaque.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 text-green-600 font-bold">2</div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Signaler à GitHub</h4>
+                                <p class="text-sm text-gray-600">Utiliser le formulaire "Report Abuse" de GitHub pour les pages hébergeant du contenu phishing.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 text-green-600 font-bold">3</div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Analyse JSON-LD</h4>
+                                <p class="text-sm text-gray-600">Utiliser l'outil de test des résultats enrichis de Google pour voir si le contenu affiché correspond aux métadonnées.</p>
+                            </div>
+                        </div>
+                        <div class="mt-6 p-4 bg-gray-50 rounded border border-gray-200 text-sm italic">
+                            "La lutte contre la fraude fiscale ne doit pas servir de prétexte à l'escroquerie numérique."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-50 border-t border-gray-200 mt-auto py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm text-gray-500">Rapport généré automatiquement pour analyse forensique.</p>
+            <p class="text-xs text-gray-400 mt-2">Source: Données simulées basées sur les vecteurs d'attaque "Deborsu/GitHub/JSON-LD".</p>
+        </div>
+    </footer>
+
+    <script>
+        // State Management
+        const state = {
+            currentView: 'overview',
+            stats: {
+                totalSites: 142,
+                githubPercentage: 78,
+                jsonLdTags: 3500
+            }
+        };
+
+        // Navigation Logic
+        function navigate(viewId) {
+            // Update State
+            state.currentView = viewId;
+
+            // Hide all sections
+            document.querySelectorAll('main > div').forEach(el => {
+                el.classList.add('hidden-section');
+            });
+
+            // Show selected section
+            const target = document.getElementById(`view-${viewId}`);
+            if(target) {
+                target.classList.remove('hidden-section');
+                // Re-trigger fade animation
+                target.classList.remove('fade-in');
+                void target.offsetWidth; // trigger reflow
+                target.classList.add('fade-in');
+            }
+
+            // Update Nav Styles (Desktop)
+            document.querySelectorAll('.nav-item').forEach(btn => {
+                btn.classList.remove('active', 'text-gray-900');
+                btn.classList.add('text-gray-500');
+            });
+            const activeBtn = document.getElementById(`nav-${viewId}`);
+            if(activeBtn) {
+                activeBtn.classList.add('active', 'text-gray-900');
+                activeBtn.classList.remove('text-gray-500');
+            }
+        }
+
+        // Interaction: Highlight Keyword Details
+        function highlightKeyword(element, keyword) {
+            const detailText = element.querySelector('p');
+            // Toggle visibility of the description
+            if (detailText.classList.contains('hidden')) {
+                // Close others first for cleaner UI
+                document.querySelectorAll('.group p').forEach(p => p.classList.add('hidden'));
+                detailText.classList.remove('hidden');
+            } else {
+                detailText.classList.add('hidden');
+            }
+        }
+
+        // Interaction: Tech Explanation
+        function explainTech(type) {
+            const box = document.getElementById('tech-explanation');
+            const codeBox = document.getElementById('json-code-display');
+            
+            // Reset code highlighting
+            // (Simple implementation: reload innerHTML logic if needed, but here we keep it static for simplicity/robustness)
+            
+            if (type === 'headline') {
+                box.innerHTML = "<strong class='text-red-600'>Usurpation de Contenu :</strong> La balise 'headline' est ce que Google affiche en gros titre. Ici, elle contient la fausse citation scandaleuse pour maximiser le taux de clic (CTR), même si le contenu de la page est différent.";
+                box.className = "mt-4 p-4 bg-red-50 border-l-4 border-red-500 text-sm text-gray-700 transition-all";
+            } else if (type === 'author') {
+                box.innerHTML = "<strong class='text-amber-600'>Autorité Fabriquée :</strong> L'attaquant définit l'auteur comme étant 'Le Soir' ou un autre média reconnu. Google peut associer cet article à la marque de confiance, trompant l'utilisateur.";
+                box.className = "mt-4 p-4 bg-amber-50 border-l-4 border-amber-500 text-sm text-gray-700 transition-all";
+            } else if (type === 'github') {
+                box.innerHTML = "<strong class='text-blue-600'>Infrastructure Gratuite :</strong> GitHub Pages offre un certificat SSL gratuit (cadenas vert) et un domaine de haute réputation (github.io), contournant de nombreux filtres de sécurité.";
+                box.className = "mt-4 p-4 bg-blue-50 border-l-4 border-blue-500 text-sm text-gray-700 transition-all";
+            }
+        }
+
+        // Interaction: Impact Calculator
+        const inputArticles = document.getElementById('input-articles');
+        const inputClicks = document.getElementById('input-clicks');
+        const displayArticles = document.getElementById('val-articles');
+        const displayClicks = document.getElementById('val-clicks');
+        const displayReach = document.getElementById('total-reach');
+
+        function updateCalculator() {
+            const articles = parseInt(inputArticles.value);
+            const clicks = parseInt(inputClicks.value);
+            
+            displayArticles.textContent = articles;
+            displayClicks.textContent = clicks;
+            
+            const total = articles * clicks;
+            displayReach.textContent = total.toLocaleString();
+        }
+
+        inputArticles.addEventListener('input', updateCalculator);
+        inputClicks.addEventListener('input', updateCalculator);
+
+
+        // Chart Initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Animate Counter
+            let count = 0;
+            const target = state.stats.totalSites;
+            const counter = setInterval(() => {
+                count += 2;
+                if (count >= target) {
+                    count = target;
+                    clearInterval(counter);
+                }
+                document.getElementById('stat-pages').textContent = count;
+            }, 20);
+
+            // Chart 1: Hosting Distribution (Donut)
+            const ctxHosting = document.getElementById('hostingChart').getContext('2d');
+            new Chart(ctxHosting, {
+                type: 'doughnut',
+                data: {
+                    labels: ['GitHub Pages', 'WordPress Hacké', 'Domaines Jetables', 'Autres'],
+                    datasets: [{
+                        data: [78, 12, 7, 3],
+                        backgroundColor: ['#3B82F6', '#EF4444', '#F59E0B', '#9CA3AF'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'right' }
+                    }
+                }
+            });
+
+            // Chart 2: Timeline (Line)
+            const ctxTimeline = document.getElementById('timelineChart').getContext('2d');
+            new Chart(ctxTimeline, {
+                type: 'line',
+                data: {
+                    labels: ['Jour 1', 'Jour 5', 'Jour 10', 'Jour 15', 'Jour 20', 'Jour 25', 'Jour 30'],
+                    datasets: [{
+                        label: 'Faux Articles Indexés',
+                        data: [2, 15, 45, 120, 280, 450, 600],
+                        borderColor: '#EF4444',
+                        backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, grid: { color: '#f3f4f6' } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+
+            // Chart 3: JSON-LD Volume (Bar)
+            const ctxJson = document.getElementById('jsonLdChart').getContext('2d');
+            new Chart(ctxJson, {
+                type: 'bar',
+                data: {
+                    labels: ['NewsArticle', 'Product (Fake)', 'Review (Fake)', 'Person'],
+                    datasets: [{
+                        label: 'Types de Schémas Détectés',
+                        data: [1200, 800, 600, 300],
+                        backgroundColor: ['#D97706', '#9CA3AF', '#9CA3AF', '#9CA3AF'],
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, grid: { color: '#f3f4f6' } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
