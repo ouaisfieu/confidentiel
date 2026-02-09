@@ -1,0 +1,114 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://ouaisfieu.github.io/confidentiel/claude/data/concepts.json",
+  "name": "Les Trois Guerres Civiques — Concepts et définitions",
+  "alternateName": "三种公民战法",
+  "description": "Dataset structuré des concepts du modèle des Trois Guerres Civiques : transposition démocratique du modèle chinois des Trois Guerres pour l'émancipation citoyenne",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "inLanguage": ["fr-BE", "zh-Hans"],
+  "datePublished": "2026-02",
+  "dateModified": "2026-02-09",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ouaisfi.eu",
+    "url": "https://ouaisfi.eu/"
+  },
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "三种公民战法 — Les Trois Guerres Civiques",
+    "url": "https://ouaisfieu.github.io/confidentiel/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Les Trois Guerres Civiques",
+    "numberOfItems": 3,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "DefinedTerm",
+          "@id": "https://ouaisfieu.github.io/confidentiel/claude/guerre-recit.html#definition",
+          "name": "Guerre du récit",
+          "alternateName": "舆论战",
+          "termCode": "GUERRE-I",
+          "description": "Première des Trois Guerres Civiques. Vise à installer un contre-récit documenté dans l'espace public par la collecte de preuves ouvertes (OSINT), le lead-dexing des acteurs et la diffusion en cascade via médias académiques puis grand public.",
+          "inDefinedTermSet": "https://ouaisfieu.github.io/confidentiel/claude/glossaire.html",
+          "sameAs": "https://www.wikidata.org/wiki/Q1146619"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "DefinedTerm",
+          "@id": "https://ouaisfieu.github.io/confidentiel/claude/guerre-desideration.html#definition",
+          "name": "Guerre de la dé-sidération",
+          "alternateName": "心理战",
+          "termCode": "GUERRE-II",
+          "description": "Deuxième des Trois Guerres Civiques. Vise à transformer l'impuissance apprise en pouvoir d'agir par l'éducation permanente tactique, la construction de collectifs et la documentation des savoirs d'expérience.",
+          "inDefinedTermSet": "https://ouaisfieu.github.io/confidentiel/claude/glossaire.html"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "DefinedTerm",
+          "@id": "https://ouaisfieu.github.io/confidentiel/claude/guerre-pretoire.html#definition",
+          "name": "Guerre du prétoire",
+          "alternateName": "法律战",
+          "termCode": "GUERRE-III",
+          "description": "Troisième des Trois Guerres Civiques. Vise à contraindre par le droit via le contentieux stratégique, la sélection de test cases à effet jurisprudentiel et le lobbying législatif citoyen avec amendements clés en main.",
+          "inDefinedTermSet": "https://ouaisfieu.github.io/confidentiel/claude/glossaire.html",
+          "sameAs": "https://www.wikidata.org/wiki/Q1055120"
+        }
+      }
+    ]
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Contentieux stratégique",
+      "alternateName": "Strategic litigation",
+      "description": "Utilisation du système judiciaire pour obtenir des changements systémiques au-delà du cas individuel",
+      "sameAs": "https://www.wikidata.org/wiki/Q7632067"
+    },
+    {
+      "@type": "Thing",
+      "name": "OSINT",
+      "alternateName": "Open Source Intelligence",
+      "description": "Renseignement en sources ouvertes : collecte et analyse d'informations publiquement accessibles",
+      "sameAs": "https://www.wikidata.org/wiki/Q1572459"
+    },
+    {
+      "@type": "Thing",
+      "name": "Éducation permanente",
+      "description": "Secteur visant l'analyse critique de la société et le développement de la citoyenneté active (décret FWB 17 juillet 2003)",
+      "sameAs": "https://www.wikidata.org/wiki/Q859517"
+    },
+    {
+      "@type": "Thing",
+      "name": "Lawfare",
+      "description": "Utilisation stratégique du droit comme arme de combat politique",
+      "sameAs": "https://www.wikidata.org/wiki/Q1055120"
+    }
+  ],
+  "keywords": [
+    "trois guerres civiques",
+    "三种公民战法",
+    "guerre du récit",
+    "舆论战",
+    "guerre psychologique",
+    "心理战",
+    "guerre juridique",
+    "法律战",
+    "contentieux stratégique",
+    "OSINT citoyen",
+    "éducation permanente",
+    "lawfare démocratique",
+    "intelligence civile",
+    "combat non-violent"
+  ]
+}

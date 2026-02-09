@@ -1,0 +1,73 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://ouaisfieu.github.io/confidentiel/claude/data/protocoles.json",
+  "name": "Protocoles opérationnels — Trois Guerres Civiques",
+  "description": "Protocoles d'action structurés pour la mise en œuvre des Trois Guerres Civiques",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "dateModified": "2026-02-09",
+  "mainEntity": [
+    {
+      "@type": "HowTo",
+      "@id": "https://ouaisfieu.github.io/confidentiel/claude/guerre-recit.html#protocole-cascade",
+      "name": "Publication en cascade",
+      "description": "Protocole de diffusion maximale d'une analyse critique : du peer-review académique à la viralité",
+      "totalTime": "P30D",
+      "tool": [
+        {"@type": "HowToTool", "name": "Revue Nouvelle ou Brussels Studies (académique)"},
+        {"@type": "HowToTool", "name": "Le Soir / La Libre (presse nationale)"},
+        {"@type": "HowToTool", "name": "Social Europe / openDemocracy (international)"},
+        {"@type": "HowToTool", "name": "Agence Belga (dépêches)"}
+      ],
+      "step": [
+        {"@type": "HowToStep", "position": 1, "name": "Version académique", "text": "Publier dans Revue Nouvelle ou Brussels Studies (15-35k signes, peer-review, 21 semaines délai moyen)"},
+        {"@type": "HowToStep", "position": 2, "name": "Carte blanche presse", "text": "Soumettre simultanément au Soir et à La Libre (500-1000 mots, desk Débats/Opinions)"},
+        {"@type": "HowToStep", "position": 3, "name": "Version internationale", "text": "Adapter pour Social Europe (700-1000 mots, submissions@socialeurope.eu) ou openDemocracy"},
+        {"@type": "HowToStep", "position": 4, "name": "Communiqué Belga", "text": "Envoyer communiqué signalant la publication à info@belga.be"},
+        {"@type": "HowToStep", "position": 5, "name": "Relais spécialisés", "text": "Contacter Alter Échos, Politique, Médor pour reprises sectorielles"},
+        {"@type": "HowToStep", "position": 6, "name": "Amplification sociale", "text": "Produire threads, visuels, données téléchargeables pour diffusion virale"}
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://ouaisfieu.github.io/confidentiel/claude/guerre-recit.html#protocole-osint",
+      "name": "Collecte OSINT systématique",
+      "description": "Protocole de veille et d'archivage des preuves ouvertes pour documentation citoyenne",
+      "step": [
+        {"@type": "HowToStep", "position": 1, "name": "Monitorer sources officielles", "text": "Surveiller Moniteur Belge, EJUSTICE, Cumuleo, BCE, registre transparence UE"},
+        {"@type": "HowToStep", "position": 2, "name": "Archiver", "text": "Sauvegarder via Wayback Machine + screenshots horodatés + hash SHA256"},
+        {"@type": "HowToStep", "position": 3, "name": "Croiser", "text": "Vérifier via sources multiples : FSMA, greffes tribunaux, cadastre des mandats"},
+        {"@type": "HowToStep", "position": 4, "name": "Documenter déclarations", "text": "Collecter verbatims sourcés (date, lieu, contexte, lien archive)"},
+        {"@type": "HowToStep", "position": 5, "name": "Constituer dossier", "text": "Formaliser en rapport avec méthodologie explicite et reproductible"}
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://ouaisfieu.github.io/confidentiel/claude/guerre-pretoire.html#protocole-contentieux",
+      "name": "Contentieux stratégique",
+      "description": "Protocole pour lancer une action en justice à impact systémique",
+      "step": [
+        {"@type": "HowToStep", "position": 1, "name": "Identifier violation", "text": "Qualifier juridiquement la violation (droit belge, européen, international)"},
+        {"@type": "HowToStep", "position": 2, "name": "Constituer preuves", "text": "Rassembler dossier OSINT avec chaîne de custody documentée"},
+        {"@type": "HowToStep", "position": 3, "name": "Choisir juridiction", "text": "Sélectionner forum optimal : tribunaux belges, CEDH, CEDS, CJUE selon la stratégie"},
+        {"@type": "HowToStep", "position": 4, "name": "Constituer collectif", "text": "Identifier ou créer le groupe de plaignants (légitimité + capacité à tenir)"},
+        {"@type": "HowToStep", "position": 5, "name": "Mobiliser avocats", "text": "Coordonner avec avocats spécialisés (pro bono, aide juridique, tiers-payant syndical)"},
+        {"@type": "HowToStep", "position": 6, "name": "Stratégie médiatique", "text": "Préparer communication parallèle : le droit comme spectacle démocratique"},
+        {"@type": "HowToStep", "position": 7, "name": "Capitaliser", "text": "Documenter pour transmission : victoire ou défaite = apprentissage collectif"}
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://ouaisfieu.github.io/confidentiel/claude/guerre-pretoire.html#protocole-lobbying",
+      "name": "Amendement citoyen",
+      "description": "Protocole pour faire adopter une proposition législative citoyenne",
+      "step": [
+        {"@type": "HowToStep", "position": 1, "name": "Rédiger amendement", "text": "Produire texte juridiquement irréprochable (forme légistique belge)"},
+        {"@type": "HowToStep", "position": 2, "name": "Identifier alliés", "text": "Cartographier parlementaires réceptifs (opposition, dissidents majorité)"},
+        {"@type": "HowToStep", "position": 3, "name": "Préparer argumentaire", "text": "Produire notes de synthèse, FAQ, chiffres clés pour les cabinets"},
+        {"@type": "HowToStep", "position": 4, "name": "Anticiper objections", "text": "Lister contre-arguments prévisibles et préparer réponses"},
+        {"@type": "HowToStep", "position": 5, "name": "Coordonner terrain", "text": "Aligner syndicats, associations, mouvements sur le texte commun"}
+      ]
+    }
+  ]
+}
